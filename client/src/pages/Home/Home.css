@@ -1,0 +1,54 @@
+#main-header { 
+    background: url("../../components/img/background.jpg");
+    background-size: cover; 
+    background-position: 50% 0%;
+    border-radius: 4;
+    margin-bottom: 20px;
+    float: center;
+    background-color: grey;
+
+}
+
+h2 {
+	text-align: center;
+	margin-top: 0px;	
+}
+
+#formRow {
+	margin-left: 5%;
+
+}
+
+#btn-search {
+	margin-left: 7%;
+	margin-top: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    font-style: italic;
+}
+
+
+#results-section { 
+    background: url("../../components/img/background.jpg");
+    background-size: cover; 
+    background-position: 50% 0%;
+    border-radius: 4;
+    margin-bottom: 0px;
+    float: center; 
+    margin-top: 20px;  
+}
+
+#articles-display {
+    background-color: #9b6540;
+}
+
+h6 {
+    color: black;
+}
+
+
+

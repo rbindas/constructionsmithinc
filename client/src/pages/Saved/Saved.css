@@ -1,0 +1,9 @@
+#saved-section { 
+    background: url("../../components/img/readingpaper.jpeg");
+    background-size: cover; 
+    background-position: 50% 0%;
+    border-radius: 4;
+    margin-bottom: 0px;
+    float: center;
+   
+}
