@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ArticleSchema = new Schema({
+const VideoSchema = new Schema({
   title: { type: String, required: true },
-  date: { type: Date},
+  snippet: {type: String}
   url: {type: String, required: true}
  
 });
 
-const Articles = mongoose.model("Articles", ArticleSchema);
+const Videos = mongoose.model("Videos", VideoSchema);
 
-module.exports = Articles;
+module.exports = Videos;

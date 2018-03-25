@@ -1,25 +1,25 @@
 import axios from "axios";
 
-const APIKEY = "7dab0ac361ad41dfaec99ec48bee4a19";
+const API_KEY = "AIzaSyCf0JI0sxFusehfx6OVqDAmRpiL4LvCdpQ";
 
-const queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + APIKEY + "&q=";
+const queryURLBase = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=" + API_KEY + "&q=";
  
 
 export default {
-  // Gets all articles
-  nytSearch: function(queryTopic) {
+  // Gets all videos
+  youTubeSearch: function(queryTopic) {
     return axios.get(`${queryURLBase}${queryTopic}`);
   },
-  // Gets the articles that saved
-  getArticles: function() {
+  // Gets the videos that saved
+  getVideos: function() {
     return axios.get("/api/saved");
   },
-  // Deletes the article with the given id
-  deleteArticle: function(id) {
+  // Deletes the video with the given id
+  deleteVideo: function(id) {
     return axios.delete("/api/saved/" + id);
   },
-  // Saves an article to the database
-  saveArticle: function(articleData) {
-    return axios.post("/api/saved", articleData);
+  // Saves an video to the database
+  saveVideo: function(videoData) {
+    return axios.post("/api/saved", videoData);
   }
 };

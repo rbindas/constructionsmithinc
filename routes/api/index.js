@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const articleRoutes = require("./articles");
+const videoRoutes = require("./videos");
 
 // Article routes
-router.use("/saved", articleRoutes);
+router.use("/saved", videoRoutes);
 
 module.exports = router;
