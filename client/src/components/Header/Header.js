@@ -1,14 +1,14 @@
 import React from "react";
 import "./Header.css";
 import { Link } from 'react-router-dom';
-import news from "../img/news.png";
+// import news from "../img/news.png";
 
 const Header = () => (
   <div className="panel" id="headingSection">
   	<row>
     	<div className="panel-heading">
     		<ul className="navbar-nav">
-        	<img src={news} alt="img" width={"70"} height={"70"} /> 
+        	// <img src={news} alt="img" width={"70"} height={"70"} /> 
         	<li className="nav-item">
           	<Link style={{ color: "yellow"}} className="nav-link" to="/">
             	Home

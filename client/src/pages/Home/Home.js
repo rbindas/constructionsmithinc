@@ -11,56 +11,7 @@ import "./Home.css";
 
 
 class Home extends Component {
-  state = {
-    articles: [],
-    queryTopic: " "
-  };
-
-  searchArticles = () => {
-    let query = `${this.state.queryTopic}`;
-    if (this.state.startDate) {
-      query = `${query}&begin_date=${this.state.startDate}0101`;
-    }
-    if (this.state.endDate){
-      query = `${query}&end_date=${this.state.endDate}1231`;
-    }
-
-    API.nytSearch(query)
-      .then(res => {
-        console.log(res);
-        this.setState({
-          articles: res.data.response.docs,
-          queryTopic: " ",
-          startDate: " ",
-          endDate: " "
-        });
-      })
-      .catch(err => console.log(err)) ;
-  }; 
-
-
-  saveArticle = data => {
-    API.saveArticle(data)
-      .then(res => {
-        console.log("Article saved");
-      })
-      .catch(err => console.log(err));
-  }
-
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.queryTopic) {
-      this.searchArticles();
-    }
-  };
+ 
 
 
   render() {
