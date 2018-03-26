@@ -22,9 +22,8 @@ const videoSeed = [
     title: "45 Small Bathroom Design Ideas 201",
     description: "bathroom vanities, shower curtains, bathroom ideas, bathroom remodel, kitchen design, small bathroom ideas, bathroom, mirrors, bathroom tile, bathroom accessories, bathroom tile ideas, bathroom..",
     url: "https://i.ytimg.com/vi/M7GExZliI2U/default.jpg",
-    videoId: "M7GExZliI2U"
-      
-  },
+    videoId: "M7GExZliI2U"   
+  }
   
 ];
 

@@ -1,7 +1,8 @@
 import React from "react";
+import { Button } from 'react-bootstrap';
 
 export const FormBtn = props => (
-  <button {...props} style={{ float: "center"}} className="btn btn-primary">
+  <Button {...props} style={{ float: "center"}} className="btn btn-primary">
     {props.children}
-  </button>
+  </Button>
 );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SaveBtn from "../../components/SaveBtn";
+// import SaveBtn from "../../components/SaveBtn";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 // import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 import "./Home.css";
+import { Button } from 'react-bootstrap';
 
 
 
@@ -15,6 +16,10 @@ class Home extends Component {
     videos: [],
     queryTopic: " "
   };
+
+  componentDidMount() {
+    this.searchVideos();
+  }
 
   searchVideos = () => {
     let query = `${this.state.queryTopic}`;
@@ -75,11 +80,11 @@ class Home extends Component {
                           />
                         
                       
-                          <FormBtn
+                          <Button bsStyle="success"
                             disabled={!this.state.queryTopic}
                             onClick={this.handleFormSubmit}
                             >Search
-                          </FormBtn>
+                          </Button>
                       
                   
                 </form>
@@ -104,14 +109,14 @@ class Home extends Component {
                       {this.state.videos.slice(0,5).map(video => (
                         <ListItem key={video._id}>   
                               
-                                <iFrame src={video.snippet.thumbnails.default.url}></iFrame>
+                                <iframe src={video.snippet.thumbnails.default.url}></iframe>
                                   <h4>{video.id.videoId}</h4>
                                   <h4><strong>{video.snippet.title}</strong></h4>
                                   <h4><strong>{video.snippet.description}</strong></h4>
                                  
                             
                             
-                              <SaveBtn style={{float: "right"}} onClick={() => this.saveVideo({
+                              <Button style={{float: "right"}} onClick={() => this.saveVideo({
                                 title: video.snippet.title,
                                 description: video.snippet.description,
                                 url: video.snippet.thumbnails.default.url,
