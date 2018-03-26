@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import SaveBtn from "../../components/SaveBtn";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 import "./Home.css";
 
 
@@ -99,21 +99,23 @@ class Home extends Component {
             </Jumbotron>
               <Container fluid id="display">
                 <Col id="videos-display">
-                  {this.state.videos.length ? (
+                  {this.state.length? (
                     <List>
                       {this.state.videos.slice(0,5).map(video => (
                         <ListItem key={video._id}>   
                               
-                                <a href={video.snippet.thumbnails.default.url}>
-                                  <strong>{video.snippet.title}</strong>
-                                  <strong>{video.snippet.description}</strong>
-                                </a> 
+                                <iFrame src={video.snippet.thumbnails.default.url}></iFrame>
+                                  <h4>{video.id.videoId}</h4>
+                                  <h4><strong>{video.snippet.title}</strong></h4>
+                                  <h4><strong>{video.snippet.description}</strong></h4>
+                                 
                             
                             
                               <SaveBtn style={{float: "right"}} onClick={() => this.saveVideo({
                                 title: video.snippet.title,
                                 description: video.snippet.description,
-                                url: video.snippet.thumbnails.default.url
+                                url: video.snippet.thumbnails.default.url,
+                                videoId: video.id.videoId
                                 })} />
                             
                         </ListItem>
