@@ -11,6 +11,7 @@ import { Button } from 'react-bootstrap';
 import VideoList from "../../components/VideoList/VideoList";
 import Iframe from "react-iframe";
 
+
 class Home extends Component {
   state = {
     videos: [],
@@ -60,7 +61,9 @@ class Home extends Component {
   render() {
   
     return (
+
       <div>
+     
         <Row>
           <Col size="col-md-8 col-md-offset-2" id="searchBox">
             <Jumbotron id="main-header">

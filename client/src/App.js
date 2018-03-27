@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import {Container} from "./components/Grid";
 import Header from "./components/Header";
+import NavigationBar from "./components/Navbar";
 
 
 const App = () => (
   <Router>
     <Container fluid>
+      <NavigationBar />
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
