@@ -14,7 +14,6 @@ mongoose.connect(
 const videoSeed = [
   {
     title: "The Top Kitchen Remodeling Trends for 2017",
-    description: "Make 2017 the year to redo your kitchen! Nick McIntyre, of Wineteer Construction shares the top kitchen trends for 2017. See more at WineteerConstruction.com.",
     url: "https://i.ytimg.com/vi/eOcnSrEtiAo/default.jpg",
     videoId: "eOcnSrEtiAo"
   },

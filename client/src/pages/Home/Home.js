@@ -8,8 +8,8 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 import "./Home.css";
 import { Button } from 'react-bootstrap';
-
-
+import VideoList from "../../components/VideoList/VideoList";
+import Iframe from "react-iframe";
 
 class Home extends Component {
   state = {
@@ -17,9 +17,6 @@ class Home extends Component {
     queryTopic: " "
   };
 
-  componentDidMount() {
-    this.searchVideos();
-  }
 
   searchVideos = () => {
     let query = `${this.state.queryTopic}`;
@@ -27,7 +24,7 @@ class Home extends Component {
       .then(res => {
         console.log(res);
         this.setState({
-          videos: res.data.response,
+          videos: res.data.items,
           queryTopic: " ",
         });
       })
@@ -80,15 +77,14 @@ class Home extends Component {
                           />
                         
                       
-                          <Button bsStyle="success"
+                          <Button bsStyle="success" bsSize="large"
                             disabled={!this.state.queryTopic}
                             onClick={this.handleFormSubmit}
                             >Search
-                          </Button>
-                      
+                          </Button>     
                   
                 </form>
-                 
+               
                 
               </Row>
             </Jumbotron>
@@ -98,28 +94,33 @@ class Home extends Component {
     
         <Row>
 
+
           <Col size="col-md-8 col-md-offset-2">
             <Jumbotron id="results-section">
                 <h2>Search Results</h2>
             </Jumbotron>
               <Container fluid id="display">
                 <Col id="videos-display">
-                  {this.state.length? (
+                  {this.state.videos.length? (
                     <List>
                       {this.state.videos.slice(0,5).map(video => (
-                        <ListItem key={video._id}>   
+                        <ListItem key={video.id.videoId}>   
                               
-                                <iframe src={video.snippet.thumbnails.default.url}></iframe>
-                                  <h4>{video.id.videoId}</h4>
+                            <Iframe 
+                                url={`http://www.youtube.com/embed/${video.id.videoId}`}
+                                width="450px"
+                                height="350px" 
+                                display="initial"
+                                position="relative"
+                                allowFullScreen />   
+                                 
                                   <h4><strong>{video.snippet.title}</strong></h4>
-                                  <h4><strong>{video.snippet.description}</strong></h4>
+                                 
                                  
                             
                             
                               <Button style={{float: "right"}} onClick={() => this.saveVideo({
                                 title: video.snippet.title,
-                                description: video.snippet.description,
-                                url: video.snippet.thumbnails.default.url,
                                 videoId: video.id.videoId
                                 })} />
                             
@@ -127,7 +128,10 @@ class Home extends Component {
                         ))}
                       </List>
                       ) : (
+                      <div>
+                      
                         <h3>No Results to Display</h3>
+                      </div>
                     )}
                 </Col>
               </Container>
