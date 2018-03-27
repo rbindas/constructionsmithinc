@@ -1,20 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-
+import Ideas from "./pages/Ideas";
 import NoMatch from "./pages/NoMatch";
 import {Container} from "./components/Grid";
-import Header from "./components/Header";
-import NavigationBar from "./components/Navbar";
+
+import Navbar from "./components/Navbar";
 
 
 const App = () => (
   <Router>
     <Container fluid>
-      <NavigationBar />
-      <Header />
+      <Navbar />
+     
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/ideas" component={Ideas} />
         
         <Route component={NoMatch} />
       </Switch>

@@ -1,54 +1,27 @@
-#main-header { 
-    /*background: url("../../components/img/background.jpg");*/
-    background-size: cover; 
-    background-position: 50% 0%;
-    border-radius: 4;
-    margin-bottom: 20px;
-    float: center;
-    background-color: grey;
 
+#why-hire-section, #services-section, #portfolio-section {
+    padding: 20px;
 }
 
-h2 {
-	text-align: center;
-	margin-top: 0px;	
+h3 {
+    text-align: center;
 }
 
-#formRow {
-	margin-left: 5%;
-
-}
-
-#btn-search {
-	margin-left: 7%;
-	margin-top: 10px;
-}
-
-label {
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
+#intro, #summary, #portfolio {
     font-style: italic;
+    text-align: center;
+    padding: 15px;
+    margin-left: 25px;   
+}
+
+.list-inline {
+    display: inline-block;
+    margin-left: 25%;
 }
 
 
-#results-section { 
-    /*background: url("../../components/img/background.jpg");*/
-    background-size: cover; 
-    background-position: 50% 0%;
-    border-radius: 4;
-    margin-bottom: 0px;
-    float: center; 
-    margin-top: 20px;  
-}
 
-#articles-display {
-    background-color: #9b6540;
-}
 
-h6 {
-    color: black;
-}
 
 
 
