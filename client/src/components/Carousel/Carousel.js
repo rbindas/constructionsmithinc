@@ -1,5 +1,5 @@
 import React from "react";
-import "./CarouselHome.css";
+import "./Carousel.css";
 
 class ControlledCarousel extends React.Component {
   constructor(props, context) {
