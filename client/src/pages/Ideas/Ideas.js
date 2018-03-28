@@ -10,7 +10,7 @@ import "./Ideas.css";
 import { Button } from 'react-bootstrap';
 import VideoList from "../../components/VideoList/VideoList";
 import Iframe from "react-iframe";
-
+import tileDivider from "../../components/img/tileDivider.png";
 
 class Ideas extends Component {
   state = {
@@ -67,6 +67,7 @@ class Ideas extends Component {
           <Container fluid id="ideas-section">
             <Col size="col-md-8 col-md-offset-2">
               <h3>Ideas and Tips</h3>
+              <img id="divider" src={tileDivider} alt="img" />
               <p id="headline"> Want to redesign your kitchen but don't know where to start? Want to remodel your bathroom but don't know how much to budget? Want to know how often to seal your granite counters? Need to know how to clean grout or care for your woodfloors? Check out our YouTube search engine, tips or schedule a consultation to discuss!
               </p>
             
@@ -98,6 +99,8 @@ class Ideas extends Component {
           </form>
           </Container>  
         </Row>
+        <br />
+        
          
         <Row>
            <Col size="col-md-10 col-md-offset-2">
@@ -124,7 +127,36 @@ class Ideas extends Component {
                       </List>
                       ) : (
                       <div>
-                        <p id="message">No Results To Display</p>
+                      <br />
+                      <br />
+                        <Row>
+                          <Col size="col-md-3 col-md-offset-1">
+                          <Iframe 
+                            url="http://www.youtube.com/embed/-FX6tLTflAs"
+                            width="250px"
+                            height="175px" 
+                            position="relative"
+                            allowFullScreen /> 
+                          </Col>
+                          <Col size="col-md-3">
+                          <Iframe 
+                            url="http://www.youtube.com/embed/bsLWNUAZ-RU"
+                            width="250px"
+                            height="175px" 
+                            position="relative"
+                            allowFullScreen /> 
+                          </Col>
+                          <Col size="col-md-3">
+                          <Iframe 
+                            url="http://www.youtube.com/embed/haQwAu7YUW8"
+                            width="250px"
+                            height="175px" 
+                            position="relative"
+                            allowFullScreen />
+                          </Col>
+                        </Row> 
+                        <br />
+                        <br /> 
                       </div>
                     )}
                 </Col>  
@@ -135,6 +167,7 @@ class Ideas extends Component {
           <Container fluid id="estimator-section">
             <Col size="col-md-8 col-md-offset-2">
               <h3>Project Budget Calculator</h3>
+              <img id="divider" src={tileDivider} alt="img" />
               <p id="est-summary"> The Project Budget Calculator estimates a rough budget for the project. It is not a contract or guarantee.
               </p>
             

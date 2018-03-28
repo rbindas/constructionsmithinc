@@ -74,9 +74,17 @@ h6 {
     margin: 15px;
 }
 
+#divider {
+    margin-left: 41%;
+}
+
 #message {
     margin-left: 30%;
     color: blue;
     font-size: 30px;
+}
+
+#seed-videos {
+    display: inline-block;
 }
 
