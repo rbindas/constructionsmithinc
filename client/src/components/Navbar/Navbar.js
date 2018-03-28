@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../img/logo.png";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
@@ -8,7 +9,7 @@ const Navbar = props => (
     <div className="container-fluid">
       <div className="navbar-header">
         <Link className="navbar-brand" to="/">
-          Construction Smith, Inc.
+          <img src={logo} alt="img" />
         </Link>
       </div>
       <ul className="nav navbar-nav">

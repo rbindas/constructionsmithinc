@@ -6,7 +6,9 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 import "./Home.css";
 import { Button } from 'react-bootstrap';
-
+import tileDivider from "../../components/img/tileDivider.png"
+import homeWhyHire from "../../components/img/homeWhyHire.png"
+import homeOurServices from "../../components/img/homeOurServices.png"
 
 class Home extends Component {
 
@@ -19,11 +21,12 @@ class Home extends Component {
           <Container fluid id="why-hire-section">
             <Col size="col-md-8 col-md-offset-2">
               <h3>Why Hire Us?</h3>
+              <img id="divider" src={tileDivider} alt="img" />
               <p id="intro"> David is a true craftman that does wonderful, quality work.  He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
               </p>
               <Row>
                 <Col size="col-md-6">
-                  <img />
+                  <img id="home-why" src={homeWhyHire} alt="img" />
                 </Col>
                 <Col size="col-md-6">
                   <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets up apart from all the rest if a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftman and loves impressing his clients with his beautiful workmanship. It is very important to us that our customers love their completed projects and recommend us to their friends.
@@ -39,11 +42,12 @@ class Home extends Component {
           <Container fluid id="services-section">
             <Col size="col-md-8 col-md-offset-2">
               <h3>Our Services</h3>
+              <img id="divider" src={tileDivider} alt="img" />
               <p id="summary"> From project design and layout services to demo and installation, we will guide you with every step of your project.
               </p>
               <Row>
                 <Col size="col-md-6">
-                  <img />
+                  <img id="home-why" src={homeOurServices} alt="img" />
                 </Col>
                 <Col size="col-md-6">
                   <ul>
@@ -58,7 +62,7 @@ class Home extends Component {
                     <li> Flooring - Marble, Wood, Ceramics or Porcelain Tile </li>
                     <li> ...and so much more! </li>
                   </ul>
-                  <Button bsStyle="primary">SCHEDULE AN APPOINTMENT</Button>
+                  <Button id="appt" bsStyle="primary">SCHEDULE AN APPOINTMENT</Button>
                 </Col>
               </Row>
           </Col>
@@ -69,6 +73,7 @@ class Home extends Component {
           <Container fluid id="portoflio-section">
             <Col size="col-md-8 col-md-offset-2">
               <h3>Project Porfolio</h3>
+              <img id="divider" src={tileDivider} alt="img" />
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
               <Row id="inline-row">
