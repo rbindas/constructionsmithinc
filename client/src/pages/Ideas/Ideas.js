@@ -8,7 +8,7 @@ import "./Ideas.css";
 import { Button } from 'react-bootstrap';
 import Iframe from "react-iframe";
 import tileDivider from "../../components/img/tileDivider.png";
-
+import CarouselInside from "../../components/CarouselInside";
 
 
 class Ideas extends Component {
@@ -56,7 +56,7 @@ class Ideas extends Component {
   
     return (
       <div>
-
+      <CarouselInside />
       <Row>
         <Container fluid id="ideas-section">
           <Col size="col-md-8 col-md-offset-2">

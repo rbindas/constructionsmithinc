@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
-
+import Carousel from "../../components/Carousel";
 
 class Home extends Component {
 
@@ -13,6 +13,7 @@ class Home extends Component {
   
     return (
       <div>
+        <Carousel />
         <Row>
           <Container fluid id="why-hire-section">
             <Col size="col-md-8 col-md-offset-2">
