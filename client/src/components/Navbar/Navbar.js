@@ -36,6 +36,7 @@ const Navbar = props => (
         </li>
       </ul>
     </div>
+    <br />
   </nav>
 );
 
