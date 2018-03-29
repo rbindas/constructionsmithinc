@@ -1,17 +1,13 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
 import "./Home.css";
 import { Button } from 'react-bootstrap';
 import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 
-class Home extends Component {
 
+class Home extends Component {
 
   render() {
   

@@ -1,61 +1,41 @@
 import React from "react";
 import "./Carousel.css";
+import slider1 from "../img/slider1.png"
+import slider2 from "../img/slider2.png"
 
-class ControlledCarousel extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+const Carousel = props => (
+      
+<div id="myCarousel" className="carousel slide" data-ride="carousel">
+  
+  <ol className="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  
+ <div className="carousel-inner">
+   <div className="item-active">
+     <img src={slider1} alt="Construction Smith Inc."/>  
+   </div>
+   <div className="item">
+     <img src={slider1} alt="Construction Smith Inc."/>
+   </div>
+  <div className="item">
+     <img src={slider2} alt="Construction Smith Inc."/>
+   </div>
+ </div>
 
-    this.handleSelect = this.handleSelect.bind(this);
+ <a className="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span className="glyphicon glyphicon-chevron-left"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="right carousel-control" href="#myCarousel" data-slide="next">
+    <span className="glyphicon glyphicon-chevron-right"></span>
+    <span className="sr-only">Next</span>
+  </a>
 
-    this.state = {
-      index: 0,
-      direction: null
-    };
-  }
+ </div>
+);
 
-  handleSelect(selectedIndex, e) {
-    alert(`selected=${selectedIndex}, direction=${e.direction}`);
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction
-    });
-  }
-
-  render() {
-    const { index, direction } = this.state;
-
-    return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-      >
-        <Carousel.Item>
-          <img width={900} height={500} alt="900x500" src="/carousel.png" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={900} height={500} alt="900x500" src="/carousel.png" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={900} height={500} alt="900x500" src="/carousel.png" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    );
-  }
-}
-
-render(<ControlledCarousel />);
+export default Carousel;
+      

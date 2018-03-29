@@ -1,23 +1,21 @@
 import React, { Component } from "react";
-// import SaveBtn from "../../components/SaveBtn";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
+import { Input } from "../../components/Form";
 import "./Ideas.css";
 import { Button } from 'react-bootstrap';
-import VideoList from "../../components/VideoList/VideoList";
 import Iframe from "react-iframe";
 import tileDivider from "../../components/img/tileDivider.png";
+
+
 
 class Ideas extends Component {
   state = {
     videos: [],
     queryTopic: " "
   };
-
 
   searchVideos = () => {
     let query = `${this.state.queryTopic}`;
@@ -32,7 +30,6 @@ class Ideas extends Component {
       .catch(err => console.log(err)) ;
   }; 
 
-
   saveVideo = data => {
     API.saveVideo(data)
       .then(res => {
@@ -40,7 +37,6 @@ class Ideas extends Component {
       })
       .catch(err => console.log(err));
   }
-
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -56,21 +52,18 @@ class Ideas extends Component {
     }
   };
 
-
-
   render() {
   
     return (
       <div>
 
       <Row>
-          <Container fluid id="ideas-section">
-            <Col size="col-md-8 col-md-offset-2">
-              <h3>Ideas and Tips</h3>
-              <img id="divider" src={tileDivider} alt="img" />
-              <p id="headline"> Want to redesign your kitchen but don't know where to start? Want to remodel your bathroom but don't know how much to budget? Want to know how often to seal your granite counters? Need to know how to clean grout or care for your woodfloors? Check out our YouTube search engine, tips or schedule a consultation to discuss!
-              </p>
-            
+        <Container fluid id="ideas-section">
+          <Col size="col-md-8 col-md-offset-2">
+            <h3>Ideas and Tips</h3>
+            <img id="divider" src={tileDivider} alt="img" />
+            <p id="headline"> Want to redesign your kitchen but don't know where to start? Want to remodel your bathroom but don't know how much to budget? Want to know how often to seal your granite counters? Need to know how to clean grout or care for your woodfloors? Check out our YouTube search engine, tips or schedule a consultation to discuss!
+            </p> 
           </Col>
         </Container>
        </Row> 
