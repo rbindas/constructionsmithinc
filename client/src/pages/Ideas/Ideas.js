@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap';
 import Iframe from "react-iframe";
 import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
+import BathroomCalculator from "../../components/BathroomCalculator";
 
 
 class Ideas extends Component {
@@ -68,6 +69,7 @@ class Ideas extends Component {
         </Container>
        </Row> 
 
+      {/* Search Section */}
         <Row>
           <Container fluid id="searchbox">         
           <form>  
@@ -94,7 +96,7 @@ class Ideas extends Component {
         </Row>
         <br />
         
-         
+      {/* Search results display */}   
         <Row>
            <Col size="col-md-10 col-md-offset-2">
                 <Col id="videos-display">
@@ -122,6 +124,9 @@ class Ideas extends Component {
                       <div>
                       <br />
                       <br />
+
+                    {/* Seeded videos before any searches.  Will be replaced with search results */}
+                        
                         <Row>
                           <Col size="col-md-3 col-md-offset-1">
                           <Iframe 
@@ -156,19 +161,19 @@ class Ideas extends Component {
             </Col>
           </Row>
 
+        {/* Calculator Section */}
           <Row>
-          <Container fluid id="estimator-section">
-            <Col size="col-md-8 col-md-offset-2">
-              <h3>Project Budget Calculator</h3>
-              <img id="divider" src={tileDivider} alt="img" />
-              <p id="est-summary"> The Project Budget Calculator estimates a rough budget for the project. It is not a contract or guarantee.
-              </p>
-            
-          </Col>
-        </Container>
-       </Row>  
+            <Container fluid id="estimator-section">
+              <Col size="col-md-8 col-md-offset-2">
+                <h3>Project Budget Calculator</h3>
+                <img id="divider" src={tileDivider} alt="img" />
+                <p id="est-summary"> The Project Budget Calculator estimates a rough budget for the project. It is not a contract or guarantee.
+                </p>
+              </Col>
+            </Container>
+           </Row>  
 
-
+          <BathroomCalculator />
 
 
 
