@@ -12,3 +12,11 @@ select {
 	font-size: 16px;
 }
 
+#cost-display {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: solid 2px grey;
+	background-color: yellow;
+}

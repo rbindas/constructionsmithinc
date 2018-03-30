@@ -12,7 +12,8 @@ class BathroomCalculator extends Component {
   state = {
     size: " ",
     area: " ",
-    quality: " "
+    quality: " ",
+    totalCost: " "
   };
 
   handleInputChange = event => {
@@ -24,16 +25,71 @@ class BathroomCalculator extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    const {name, value} = event.target;
     if (this.state.size && this.state.area && this.state.quality) {
+      console.log(this.state.size + this.state.area + this.state.quality);
       this.calculateCost();
+      this.setState({
+        [name]:value
+      });
     }
   };
 
   calculateCost = (size, area, quality) => {
-    const laborCostPerSqFt = 200;
+    const laborCostPerHr = 80;
+    const areaFloorsHrPerSqFt = 0.5;
+    const areaFloorsWallHrPerSqFt = 1;
+    const lowEndPerSqFt = 25;
+    const midRangePerSqFt = 50;
+    const luxuryPerSqFt = 100;
+    let areaFloorsCost;
+    let areaFloorsWallCost;
+    let lowEndCost;
+    let midRangeCost;
+    let luxuryCost;
+    let totalCost;
+    let selectedArea;
+    let selectedQuality;
 
+    let areaFloorsTotalLaborHr = this.state.size * areaFloorsHrPerSqFt;
+    let areaFloorsWallTotalLaborHr = this.state.size * areaFloorsWallHrPerSqFt;
     
 
+    {/* cost for install tiles on floors only and selected trim quality */}
+    if (this.state.area === "floors") {
+      areaFloorsCost = laborCostPerHr * areaFloorsTotalLaborHr;
+      if (this.state.quality === "low-end") {
+          lowEndCost = lowEndPerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsCost + lowEndCost;
+      } else 
+      if (this.state.quality === "mid-range") {
+          midRangeCost = midRangePerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsCost + midRangeCost;
+      } else
+      if (this.state.quality === "luxury") {
+          luxuryCost = luxuryPerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsCost + luxuryCost; 
+      }    
+
+    } else
+    {/* cost for install tiles on floors & walls and selected trim quality */}
+    if (this.state.area === "floors-wall") {
+      areaFloorsWallCost = laborCostPerHr * areaFloorsWallTotalLaborHr;
+      if (this.state.quality === "low-end") {
+          lowEndCost = lowEndPerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsWallCost + lowEndCost;
+      } else 
+      if (this.state.quality === "mid-range") {
+          midRangeCost = midRangePerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsWallCost + midRangeCost;
+      } else
+      if (this.state.quality === "luxury") {
+          luxuryCost = luxuryPerSqFt * this.state.size;
+          this.state.totalCost = areaFloorsWallCost + luxuryCost; 
+      }    
+
+     }
+      
   };
 
 
@@ -76,8 +132,8 @@ class BathroomCalculator extends Component {
                         <label>Install New Tiles</label>
                       </Col>
                       <Col size="col-md-4">
-                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange}>
-                          <option value="-1" disabled>--</option>
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="area">
+                          <option value="-1" abled>Select Option</option>
                           <option value="floors">Floors Only</option>
                           <option value="floors-wall">Floors & Wall</option>
                         </select>
@@ -91,8 +147,8 @@ class BathroomCalculator extends Component {
                         <label>Quality</label>
                       </Col>
                       <Col size="col-md-4">
-                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange}>
-                          <option value="-1" disabled>--</option>
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="quality">
+                          <option value="-1" abled>Select Option</option>
                           <option value="low-end">Low End</option>
                           <option value="mid-range">Mid Range</option>
                           <option value="luxury">Luxury</option>
@@ -103,17 +159,34 @@ class BathroomCalculator extends Component {
 
                 {/* calculating button */}
                   <div className="panel-body">
-                    <Button id="calc-btn" bsStyle="warning"
+                    <Button id="calc-btn" bsStyle="primary"
                       onClick={this.handleFormSubmit}
                       >Calculate Estimated Cost
                     </Button>
                   </div> 
+
+                  <div className="panel panel-default" id="cost-display">
+                    <div className="panel-body">
+                      <Row>
+                        <Col size="col-md-8">
+                          <label>Estimated Cost: </label>
+                        </Col>
+                      
+                        <Col size="col-md-4">
+                          <label>US $</label><label>{this.state.totalCost}</label> 
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </Col>
       </Row>
+
+    {/* display results from calculator */}
+
 
          
     </Container>
