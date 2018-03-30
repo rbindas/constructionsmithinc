@@ -22,7 +22,7 @@ class Contact extends Component {
               <img id="divider" src={tileDivider} alt="img" />
               <h3>Watch your projects come to life</h3>
               
-              <p>Bring us your idea and we'll design a solution to meet your needs. We are a licensed home improvement and restoration company living and serving northeast Ohio. Some of the communities we serve include: Mentor, Painesville, Shaker Hts, and more.</p> 
+              <p>Bring us your idea and we will design a solution to meet your needs. We are a licensed home improvement and restoration company living and serving northeast Ohio. Some of the communities we serve include: Mentor, Painesville, Shaker Hts, and more.</p> 
 
               <p>Want to ask us a question or schedule a meeting? Give us a call, send us an email, or schedule an appointment to bring your next home project to life.</p>
               
