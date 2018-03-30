@@ -8,6 +8,7 @@ import "./Contact.css";
 import { Button } from 'react-bootstrap';
 import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
+import ScheduleAppointment from "../../components/ScheduleAppointment";
 
 
 
@@ -33,8 +34,8 @@ class Contact extends Component {
                   <p className="glyphicon glyphicon-earphone" aria-hidden="true"> 440.479.2028</p>
                   <br />
                   <p className="glyphicon glyphicon-envelope" aria-hidden="true"><a href="mailto:tilemandavid@gmail.com"> tilemandavid@gmail.com</a></p>
-                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button>
-                </Col>
+                  <ScheduleAppointment />
+                  </Col>
               </Row>          
             </Col>
           </Container>

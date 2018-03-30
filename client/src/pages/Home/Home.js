@@ -7,6 +7,7 @@ import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
+import ScheduleAppointment from "../../components/ScheduleAppointment";
 
 class Home extends Component {
 
@@ -65,7 +66,7 @@ class Home extends Component {
                     <li> Flooring - Marble, Wood, Ceramics or Porcelain Tile </li>
                     <li> ...and so much more! </li>
                   </ul>
-                  <Button id="appt" bsStyle="primary">SCHEDULE AN APPOINTMENT</Button>
+                  <ScheduleAppointment />
                 </Col>
               </Row>
           </Col>

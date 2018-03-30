@@ -11,9 +11,18 @@ import { Button } from 'react-bootstrap';
 class ScheduleAppointment extends Component {
     render() {
   
-    
+    return (
+      <div>        
+        <Row>
+          <Container fluid>
+            <Col size="col-md-8 col-md-offset-2">
+              <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button>
+            </Col>
+          </Container>
+        </Row>
+      </div>
   
-   
+    );
   }
 }
 
