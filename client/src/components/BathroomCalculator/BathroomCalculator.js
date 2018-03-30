@@ -165,6 +165,7 @@ class BathroomCalculator extends Component {
                     </Button>
                   </div> 
 
+                 {/* display results from calculator */}
                   <div className="panel panel-default" id="cost-display">
                     <div className="panel-body">
                       <Row>
@@ -184,8 +185,9 @@ class BathroomCalculator extends Component {
           </div>
         </Col>
       </Row>
+      <br />
 
-    {/* display results from calculator */}
+   
 
 
          
