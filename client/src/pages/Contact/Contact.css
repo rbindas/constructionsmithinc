@@ -1,0 +1,23 @@
+#divider {
+    margin-left: 35%;
+    
+}
+
+#contact-title {
+    text-align: center;
+}
+
+#contact-subtitle {
+	color: #3399ff;
+	text-align: left;
+}
+
+#appt {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+p {
+  font-size: 16px;
+  color: #7b7b7b;
+}
