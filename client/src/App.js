@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Ideas from "./pages/Ideas";
 import Contact from "./pages/Contact";
+import Client from "./pages/Client";
 import NoMatch from "./pages/NoMatch";
 import {Container} from "./components/Grid";
 import Navbar from "./components/Navbar";
@@ -21,6 +22,7 @@ const App = () => (
         <Route exact path="/about" component={About} />
         <Route exact path="/ideas" component={Ideas} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/client" component={Client} />
         <Route component={NoMatch} />
       </Switch>
     </Container>
