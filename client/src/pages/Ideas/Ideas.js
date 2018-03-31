@@ -98,7 +98,7 @@ class Ideas extends Component {
         
       {/* Search results display */}   
         <Row>
-           <Col size="col-md-10 col-md-offset-2">
+           <Col size="col-md-10 col-md-offset-1">
                 <Col id="videos-display">
                   {this.state.videos.length? (
                     <List>

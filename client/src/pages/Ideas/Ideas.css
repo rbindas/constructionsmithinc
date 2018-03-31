@@ -40,20 +40,6 @@ label {
 }
 
 
-#results-section { 
-    /*background: url("../../components/img/background.jpg");*/
-    background-size: cover; 
-    background-position: 50% 0%;
-    border-radius: 4;
-    margin-bottom: 0px;
-    float: center; 
-    margin-top: 20px;  
-}
-
-#articles-display {
-    background-color: #9b6540;
-}
-
 h6 {
     color: black;
 }
