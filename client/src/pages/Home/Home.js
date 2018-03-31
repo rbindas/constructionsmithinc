@@ -11,10 +11,6 @@ import Carousel from "../../components/Carousel";
 
 class Home extends Component {
 
-  goToAboutPage = (e) => {
-    e.preventDefault();
-    window.location = "../About";
-  }
 
   render() {
   
@@ -35,7 +31,6 @@ class Home extends Component {
                 <Col size="col-md-6">
                   <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets up apart from all the rest if a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftman and loves impressing his clients with his beautiful workmanship. It is very important to us that our customers love their completed projects and recommend us to their friends.
                   </p>
-                  <Button bsStyle="primary" onClick={this.goToAboutPage}>READ MORE</Button>
                 </Col>
               </Row>
           </Col>
