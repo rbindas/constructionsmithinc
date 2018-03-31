@@ -28,7 +28,7 @@ class About extends Component {
                 <Col size="col-md-6">
                   <p id="about-details">We have been doing home renovations; kitchens, bathrooms, finished basements, fireplaces, pool decks and more, as well as commercial projects and new home construction projects for over 30 years.  What sets us apart is a master-craftsman skill level, a designer's eye for detail and most of all, great pride in workmanship.  Offering something that is difficult to find in today's world, David is a true craftman and loves impressing his clients with his beautiful workmanship.  Customer satisfaction is our number one goal.  We want our customers to love their completed projects and recommend us to their friends.
                   </p>
-                  <Button bsStyle="primary">SCHEDULE AN APPOINTMENT</Button>
+                  <Button id="apt-about" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
                 </Col>
               </Row>
           </Col>
