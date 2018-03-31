@@ -49,6 +49,7 @@ class Client extends Component {
         </Row>
 
         <Row>
+         
               <Col size="col-md-10 col-md-offset-1" id="saved-display">
                 {this.state.videos.length? (
                   <List>
@@ -59,8 +60,7 @@ class Client extends Component {
                                 width="250px"
                                 height="175px" 
                                 position="relative"
-                                allowFullScreen /> 
-                            <h5>{video.title}</h5>  
+                                allowFullScreen />  
                             <Row>
                               <Button id="del-btn" bsStyle="warning" onClick={() => this.deleteVideo(video._id)}>Delete</Button>
                             </Row>
@@ -71,6 +71,7 @@ class Client extends Component {
                     <h3>No Saved Videos to Display</h3>
                   )}
               </Col>
+        
         </Row>
 
 
