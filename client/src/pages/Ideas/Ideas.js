@@ -109,8 +109,7 @@ class Ideas extends Component {
                                 width="250px"
                                 height="175px" 
                                 position="relative"
-                                allowFullScreen /> 
-                            <h5>{video.snippet.title}</h5>                             
+                                allowFullScreen />                             
                             <Row>
                               <Button bsStyle="primary" id="save-btn" onClick={() => this.saveVideo({
                                 title: video.snippet.title,
@@ -128,7 +127,7 @@ class Ideas extends Component {
                     {/* Seeded videos before any searches.  Will be replaced with search results */}
                         
                         <Row>
-                          <Col size="col-md-3 col-md-offset-1">
+                          <Col size="col-md-3 col-md-offset-2">
                           <Iframe 
                             url="http://www.youtube.com/embed/-FX6tLTflAs"
                             width="250px"
