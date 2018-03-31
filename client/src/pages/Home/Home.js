@@ -66,7 +66,7 @@ class Home extends Component {
                     <li> Flooring - Marble, Wood, Ceramics or Porcelain Tile </li>
                     <li> ...and so much more! </li>
                   </ul>
-                  <ScheduleAppointment />
+                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
                 </Col>
               </Row>
           </Col>
