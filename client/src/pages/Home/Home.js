@@ -7,7 +7,7 @@ import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
-import ScheduleAppointment from "../../components/ScheduleAppointment";
+
 
 class Home extends Component {
 
