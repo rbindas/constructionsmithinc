@@ -9,10 +9,17 @@ const Navbar = props => (
     <div className="container-fluid">
       <div className="navbar-header">
         <Link className="navbar-brand" to="/">
-          <img src={logo} alt="img" />
+          <img className="logo" src={logo} alt="img" />
         </Link>
+
       </div>
+
+
+
+      
+
       <ul className="nav navbar-nav">
+
         <li
           className={
             window.location.pathname === "/" || window.location.pathname === "/home"
@@ -20,6 +27,7 @@ const Navbar = props => (
               : ""
           }
         >
+      
           <Link to="/">Home</Link>
         </li>
         <li className={window.location.pathname === "/contact" ? "active" : ""}>

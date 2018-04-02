@@ -9,7 +9,9 @@ import contactTop from "../img/contactTop.png";
 const CarouselInside = props => (
       
   <div id="myCarousel" className="carousel slide" data-ride="carousel">
-  
+  <div className="phone2">
+    <h3>Call for a FREE Consultation. 440.479.2028</h3>
+ </div>
     <ol className="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>

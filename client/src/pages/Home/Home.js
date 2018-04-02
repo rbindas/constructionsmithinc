@@ -20,7 +20,7 @@ class Home extends Component {
         <Row>
           <Container fluid id="why-hire-section">
             <Col size="col-md-8 col-md-offset-2">
-              <h3>Why Hire Us?</h3>
+              <h1>Why Hire Us?</h1>
               <img id="divider" src={tileDivider} alt="img" />
               <p id="intro"> David is a true craftman that does wonderful, quality work.  He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
               </p>
@@ -40,7 +40,7 @@ class Home extends Component {
       <Row>
           <Container fluid id="services-section">
             <Col size="col-md-8 col-md-offset-2">
-              <h3>Our Services</h3>
+              <h1>Our Services</h1>
               <img id="divider" src={tileDivider} alt="img" />
               <p id="summary"> From project design and layout services to demo and installation, we will guide you with every step of your project.
               </p>
@@ -71,7 +71,7 @@ class Home extends Component {
         <Row>
           <Container fluid id="portoflio-section">
             <Col size="col-md-8 col-md-offset-2">
-              <h3>Project Porfolio</h3>
+              <h1>Project Porfolio</h1>
               <img id="divider" src={tileDivider} alt="img" />
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
@@ -86,9 +86,9 @@ class Home extends Component {
               </Row>
               <Row>
 
-                <h3>Image place holder</h3>
+                <h1>Image place holder</h1>
 
-
+            
               </Row>
           </Col>
         </Container>

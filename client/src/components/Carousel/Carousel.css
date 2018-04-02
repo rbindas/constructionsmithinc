@@ -1,3 +1,13 @@
 #myCarousel {
 	margin-top: 100px;
 }
+.phone2 {
+	text-align:center;
+	color:#000000;
+	font-size:22px;
+	font-weight:bold;
+	padding:10px;
+	padding-top:15px;
+	margin-top:25px;
+	border-top:solid thin red;
+}

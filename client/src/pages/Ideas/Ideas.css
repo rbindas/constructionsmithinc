@@ -8,6 +8,9 @@
     background-color: grey;
 
 }
+.greybg {
+        background-color:#e3dfdf;  
+}
 
 h2 {
 	text-align: center;
@@ -47,13 +50,14 @@ h6 {
 #btn {
     float: left;
     margin-top: 25px;
+    margin-right:25px;
 }
 
 #searchbox {
-    background-color: gray;
+    background-color: #e3dfdf;
     width: 40%;
     border-radius: 5px;
-    padding: 15px;
+    padding: 20px;
 }
 
 #save-btn {
@@ -61,7 +65,7 @@ h6 {
     margin: 15px;
 }
 
-#divider {
+#dividerh {
     margin-left: 41%;
 }
 

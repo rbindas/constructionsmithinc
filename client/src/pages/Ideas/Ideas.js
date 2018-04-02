@@ -74,7 +74,7 @@ class Ideas extends Component {
           <Container fluid id="searchbox">         
           <form>  
             <Row>
-                <Col size="col-md-10">
+                <Col size="col-md-9">
                   <label>Ideas or Tips Search:</label>
                   <Input
                     value={this.state.queryTopic}
@@ -161,7 +161,7 @@ class Ideas extends Component {
           </Row>
 
         {/* Calculator Section */}
-          <Row>
+          <Row className="greybg">
             <Container fluid id="estimator-section">
               <Col size="col-md-8 col-md-offset-2">
                 <h3>Project Budget Calculator</h3>

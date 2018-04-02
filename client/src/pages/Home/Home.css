@@ -1,10 +1,24 @@
 
-#why-hire-section, #services-section, #portfolio-section {
+#why-hire-section, #portfolio-section {
     padding: 20px;
+    margin-left: auto;
+    margin-right:auto;
+}
+#services-section{
+    padding: 20px;
+    margin-left: auto;
+    margin-right:auto; 
+    background-color:#e3dfdf;  
+}
+h1 {
+    text-align: center;
+    
 }
 
 h3 {
     text-align: center;
+    font-weight:bold;
+
 }
 
 #intro, #summary, #portfolio {
@@ -25,7 +39,9 @@ h3 {
 }
 
 #divider {
-	margin-left: 40%;
+	margin-left: 38%;
+
+
 }
 
 #home-why {

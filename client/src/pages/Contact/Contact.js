@@ -19,7 +19,7 @@ class Contact extends Component {
         <CarouselInside />        
         <Container fluid id="content-section">
             <Col size="col-md-8 col-md-offset-2">
-              <h3 id="contact-title">Contact Us</h3>
+              <h1 id="contact-title">Contact Us</h1>
                <img id="divider" src={tileDivider} alt="img" />
               <h3 id="contact-subtitle">Watch your projects come to life</h3>
               
@@ -29,10 +29,12 @@ class Contact extends Component {
               
               <Row>
                 <Col size="col-md-6">
-                  <p className="glyphicon glyphicon-earphone" aria-hidden="true"> 440.479.2028</p>
+                  <p className="glyphicon glyphicon-earphone" aria-hidden="true">  <span id="contactNumber">440.479.2028</span></p>
                   <br />
-                  <p className="glyphicon glyphicon-envelope" aria-hidden="true"><a href="mailto:tilemandavid@gmail.com"> tilemandavid@gmail.com</a></p>
-                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button>  
+                  <p className="glyphicon glyphicon-envelope" aria-hidden="true"><span id="contactNumber"><a href="mailto:tilemandavid@gmail.com">&nbsp;&nbsp;tilemandavid@gmail.com</a></span></p>
+                  <br/><br/>
+                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button>
+                  <br/><br/>  
                   </Col>
               </Row>          
             </Col>
