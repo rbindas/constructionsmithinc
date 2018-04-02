@@ -7,7 +7,7 @@ import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
-
+import Gallery from "../../components/Gallery";
 
 class Home extends Component {
 
@@ -87,7 +87,7 @@ class Home extends Component {
               <Row>
 
                 <h1>Image place holder</h1>
-
+<Gallery/>
             
               </Row>
           </Col>

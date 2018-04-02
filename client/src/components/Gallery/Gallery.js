@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Component } from "react";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
+import { Input } from "../../components/Form";
+import { Button } from 'react-bootstrap';
+
 import ImageGallery from 'react-image-gallery';
 
+class Gallery extends Component {
 
-class MyComponent extends React.Component {
 
   handleImageLoad(event) {
     console.log('Image loaded ', event.target)
