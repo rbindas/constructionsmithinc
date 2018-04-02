@@ -116,7 +116,7 @@ class BathroomCalculator extends Component {
                       <Col size="col-md-5">
                         <label>Bathroom Size</label>
                       </Col>
-                      <Col size="col-md-4">
+                      <Col size="col-md-5">
                         <Input 
                           value={this.state.size}
                           onChange={this.handleInputChange}
@@ -131,7 +131,7 @@ class BathroomCalculator extends Component {
                       <Col size="col-md-5">
                         <label>Install New Tiles</label>
                       </Col>
-                      <Col size="col-md-4">
+                      <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="area">
                           <option value="-1" abled>Select Option</option>
                           <option value="floors">Floors Only</option>
@@ -146,7 +146,7 @@ class BathroomCalculator extends Component {
                       <Col size="col-md-5">
                         <label>Quality</label>
                       </Col>
-                      <Col size="col-md-4">
+                      <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="quality">
                           <option value="-1" abled>Select Option</option>
                           <option value="low-end">Low End</option>

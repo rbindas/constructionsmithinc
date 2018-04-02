@@ -10,7 +10,7 @@ import Iframe from "react-iframe";
 import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
 import BathroomCalculator from "../../components/BathroomCalculator";
-
+import KitchenCalculator from "../../components/KitchenCalculator";
 
 class Ideas extends Component {
   state = {
@@ -173,6 +173,9 @@ class Ideas extends Component {
            </Row>  
 
           <BathroomCalculator />
+          <KitchenCalculator />
+
+          <br />
 
 
 
