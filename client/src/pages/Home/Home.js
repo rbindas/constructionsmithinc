@@ -7,7 +7,6 @@ import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
-import Comments from "../../components/Comments";
 import BathroomGallery from "../../components/BathroomGallery";
 import KitchenGallery from "../../components/KitchenGallery";
 import OtherGallery from "../../components/OtherGallery";
