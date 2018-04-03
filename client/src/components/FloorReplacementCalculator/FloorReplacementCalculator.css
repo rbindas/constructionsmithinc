@@ -1,0 +1,22 @@
+label {
+	margin-left: 25px;
+}
+
+#calc-btn {
+	margin-left: 10px;
+}
+
+select {
+	width: 280px;
+	height: 35px;
+	font-size: 16px;
+}
+
+#cost-display {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: solid 2px grey;
+	background-color: yellow;
+}

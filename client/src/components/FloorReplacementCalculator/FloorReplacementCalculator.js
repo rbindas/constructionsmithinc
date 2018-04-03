@@ -2,17 +2,20 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input } from "../../components/Form";
-import "./BathroomCalculator.css";
+import "./FloorReplacementCalculator.css";
 import { Button } from 'react-bootstrap';
 
 
 
 
-class BathroomCalculator extends Component {
+class FloorReplacementCalculator extends Component {
   state = {
     size: " ",
-    area: " ",
+    material: " ",
     quality: " ",
+    removeOldFloor: " ",
+    installSubfloor: " ",
+    installTrim: " ",
     totalCost: " "
   };
 
@@ -26,16 +29,20 @@ class BathroomCalculator extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const {name, value} = event.target;
-    if (this.state.size && this.state.area && this.state.quality) {
-      console.log(this.state.size + this.state.area + this.state.quality);
-      this.calculateCost();
-      this.setState({
-        [name]:value
-      });
-    }
+    if (this.state.size && 
+        this.state.material && 
+        this.state.quality && 
+        this.state.removeOldFloor && 
+        this.state.installSubfloor && 
+        this.state.installTrim) {
+            this.calculateCost();
+            this.setState({
+              [name]:value
+            });
+        }
   };
 
-  calculateCost = (size, area, quality) => {
+  calculateCost = () => {
     const laborCostPerHr = 75;
     const areaFloorsHrPerSqFt = 2;
     const areaFloorsWallHrPerSqFt = 4;
@@ -102,19 +109,19 @@ class BathroomCalculator extends Component {
           <Col size="col-md-8 col-md-offset-2">
             <div className="panel-group">
               <div className="panel panel-primary">
-                <a className="panel-primary" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                <a className="panel-primary" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
                 <div className="panel-heading">
-                  <h4 className="panel-title">Bathroom Remodel Budget Estimator</h4>
+                  <h4 className="panel-title">Floor Replacement Budget Estimator</h4>
                 </div>
                 </a>
-              <div id="collapseOne" className="panel-collapse collapse">
+              <div id="collapseThree" className="panel-collapse collapse">
                 <form>
                  <div className="panel-body">
                     
                     {/* input on the room size */}
                     <Row>
                       <Col size="col-md-5">
-                        <label>Bathroom Size</label>
+                        <label>Room Size</label>
                       </Col>
                       <Col size="col-md-5">
                         <Input 
@@ -126,16 +133,19 @@ class BathroomCalculator extends Component {
                       <label>sq. ft.</label>
                     </Row>
 
-                    {/* input on area to tile */} 
+                    {/* input on flooring material */} 
                     <Row>
                       <Col size="col-md-5">
-                        <label>Install New Tiles</label>
+                        <label>Flooring Material</label>
                       </Col>
                       <Col size="col-md-5">
-                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="area">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="material">
                           <option value="-1" abled>Select Option</option>
-                          <option value="floors">Floors Only</option>
-                          <option value="floors-wall">Floors & Wall</option>
+                          <option value="carpets">Carpets</option>
+                          <option value="hardwood">Hardwood</option>
+                          <option value="laminate">Laminate</option>
+                          <option value="porcelain">Porcelain / Tile </option>
+                          <option value="vinyl">Vinyl</option>
                         </select>
                       </Col>  
                     </Row> 
@@ -144,17 +154,67 @@ class BathroomCalculator extends Component {
                   {/* input on quality of materials */}
                     <Row>
                       <Col size="col-md-5">
-                        <label>Quality</label>
+                        <label>Material Quality</label>
                       </Col>
                       <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="quality">
                           <option value="-1" abled>Select Option</option>
-                          <option value="low-end">Low End</option>
+                          <option value="low-end">Low-End</option>
                           <option value="mid-range">Mid Range</option>
-                          <option value="luxury">Luxury</option>
+                          <option value="hi-end">High-End</option>
                         </select>   
                       </Col>  
                     </Row>
+                    <br />
+
+                  {/* input on removing old flooring */}
+                    <Row>
+                      <Col size="col-md-5">
+                        <label>Remove Old Flooring</label>
+                      </Col>
+                      <Col size="col-md-5">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="removeOldFloor">
+                          <option value="-1" abled>Select Option</option>
+                          <option value="no">No</option>
+                          <option value="yes-carpet">Yes - Carpet</option>
+                          <option value="yes-hardwood">Yes - Harwood</option>
+                          <option value="yes-laminate">Yes - Laminate</option>
+                          <option value="yes-tile">Yes - Tile</option>
+                        </select>   
+                      </Col>  
+                    </Row>
+                     <br />
+
+                  {/* input on subfloor installation */}
+                    <Row>
+                      <Col size="col-md-5">
+                        <label>Install Subfloor?</label>
+                      </Col>
+                      <Col size="col-md-5">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="installSubfloor">
+                          <option value="-1" abled>Select Option</option>
+                          <option value="no">No</option>
+                          <option value="yes">Yes</option>
+                        </select>   
+                      </Col>  
+                    </Row>
+                     <br />
+
+                  {/* input on subfloor installation */}
+                    <Row>
+                      <Col size="col-md-5">
+                        <label>Install Trim?</label>
+                      </Col>
+                      <Col size="col-md-5">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="installTrim">
+                          <option value="-1" abled>Select Option</option>
+                          <option value="no">No</option>
+                          <option value="yes">Yes</option>
+                        </select>   
+                      </Col>  
+                    </Row>
+                     <br />
+
                   </div>
 
                 {/* calculating button */}
@@ -197,4 +257,4 @@ class BathroomCalculator extends Component {
 }
 }
 
-export default BathroomCalculator;
+export default FloorReplacementCalculator;

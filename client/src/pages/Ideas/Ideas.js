@@ -11,6 +11,7 @@ import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
 import BathroomCalculator from "../../components/BathroomCalculator";
 import KitchenCalculator from "../../components/KitchenCalculator";
+import FloorReplacementCalculator from "../../components/FloorReplacementCalculator";
 
 class Ideas extends Component {
   state = {
@@ -174,6 +175,7 @@ class Ideas extends Component {
 
           <BathroomCalculator />
           <KitchenCalculator />
+          <FloorReplacementCalculator />
 
           <br />
 

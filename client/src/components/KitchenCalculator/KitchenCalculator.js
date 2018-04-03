@@ -50,7 +50,7 @@ class KitchenCalculator extends Component {
   };
 
   calculateCost = () => {
-    const laborCostPerHr = 75;
+    
    {/* paint cost per sq ft */} 
     const paintCostPerSqFt = 22.50;
   {/* appliances package cost */}
@@ -165,7 +165,7 @@ class KitchenCalculator extends Component {
               <div className="panel panel-primary">
                 <a className="panel-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
                 <div className="panel-heading">
-                  <h4 className="panel-title">Kitchen Remodel Estimator</h4>
+                  <h4 className="panel-title">Kitchen Remodel Budget Estimator</h4>
                 </div>
                 </a>
               <div id="collapseTwo" className="panel-collapse collapse">
