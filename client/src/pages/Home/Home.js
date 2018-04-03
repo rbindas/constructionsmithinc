@@ -7,7 +7,7 @@ import tileDivider from "../../components/img/tileDivider.png"
 import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
-import Gallery from "../../components/Gallery";
+import BathroomGallery from "../../components/BathroomGallery";
 
 class Home extends Component {
 
@@ -77,18 +77,17 @@ class Home extends Component {
               </p>
               <Row id="inline-row">
                 <ul className="list-inline">
-                  <li>All</li>
-                  <li>Kitchens</li>
-                  <li>Bathrooms</li>
-                  <li>Basements/Fireplaces/Pools & More</li>
-                  <li>Commercial Projects</li>
+                  
+                  <li><Button>Kitchens</Button></li>
+                  <li><Button>Bathrooms</Button></li>
+                  <li><Button>Basements/Fireplaces/Pools & More</Button></li>
+                  <li><Button>Commercial Projects</Button></li>
                 </ul>   
               </Row>
               <Row>
-
-                <h1>Image place holder</h1>
-<Gallery/>
-            
+                <Col size="col-md-4">
+                  <BathroomGallery />
+                </Col>
               </Row>
           </Col>
         </Container>
