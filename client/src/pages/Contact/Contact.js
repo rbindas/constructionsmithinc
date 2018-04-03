@@ -16,7 +16,8 @@ class Contact extends Component {
   
     return (
       <div>
-        <CarouselInside />        
+        <CarouselInside /> 
+               
         <Container fluid id="content-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1 id="contact-title">Contact Us</h1>
