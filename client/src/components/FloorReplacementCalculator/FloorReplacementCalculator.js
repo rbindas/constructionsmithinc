@@ -144,6 +144,7 @@ class FloorReplacementCalculator extends Component {
                           <option value="carpets">Carpets</option>
                           <option value="hardwood">Hardwood</option>
                           <option value="laminate">Laminate</option>
+                          <option value="naturalStone">Natural Stone</option>
                           <option value="porcelain">Porcelain / Tile </option>
                           <option value="vinyl">Vinyl</option>
                         </select>
@@ -177,7 +178,7 @@ class FloorReplacementCalculator extends Component {
                           <option value="-1" abled>Select Option</option>
                           <option value="no">No</option>
                           <option value="yes-carpet">Yes - Carpet</option>
-                          <option value="yes-hardwood">Yes - Harwood</option>
+                          <option value="yes-hardwood">Yes - Hardwood</option>
                           <option value="yes-laminate">Yes - Laminate</option>
                           <option value="yes-tile">Yes - Tile</option>
                         </select>   
