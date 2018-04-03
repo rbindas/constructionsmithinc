@@ -8,6 +8,7 @@ import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
 import Gallery from "../../components/Gallery";
+import Comments from "../../components/Comments";
 
 class Home extends Component {
 
@@ -87,6 +88,7 @@ class Home extends Component {
               <Row>
 
                 <h1>Image place holder</h1>
+                <Comments />
 <Gallery/>
             
               </Row>
