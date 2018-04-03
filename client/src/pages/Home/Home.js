@@ -8,6 +8,8 @@ import homeWhyHire from "../../components/img/homeWhyHire.png"
 import homeOurServices from "../../components/img/homeOurServices.png"
 import Carousel from "../../components/Carousel";
 import BathroomGallery from "../../components/BathroomGallery";
+import KitchenGallery from "../../components/KitchenGallery";
+import OtherGallery from "../../components/OtherGallery";
 
 class Home extends Component {
 
@@ -69,24 +71,25 @@ class Home extends Component {
        </Row> 
 
         <Row>
-          <Container fluid id="portoflio-section">
+          <Container fluid id="portfolio-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1>Project Porfolio</h1>
               <img id="divider" src={tileDivider} alt="img" />
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
-              <Row id="inline-row">
-                <ul className="list-inline">
-                  
-                  <li><Button>Kitchens</Button></li>
-                  <li><Button>Bathrooms</Button></li>
-                  <li><Button>Basements/Fireplaces/Pools & More</Button></li>
-                  <li><Button>Commercial Projects</Button></li>
-                </ul>   
-              </Row>
+              
               <Row>
                 <Col size="col-md-4">
+                <h3>Bathrooms</h3>
                   <BathroomGallery />
+                </Col>
+                <Col size="col-md-4">
+                <h3>Kitchens</h3>
+                  <KitchenGallery />
+                </Col>
+                <Col size="col-md-4">
+                <h3>Other Projects</h3>
+                  <OtherGallery />
                 </Col>
               </Row>
           </Col>
