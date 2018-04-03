@@ -3,8 +3,13 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input } from "../../components/Form";
 import { Button } from 'react-bootstrap';
-
 import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
+
+import slider1 from "../img/slider1.png";
+import slider2 from "../img/slider2.png";
+import slider3 from "../img/slider3.png";
+import slider4 from "../img/slider4.png";
 
 class Gallery extends Component {
 
