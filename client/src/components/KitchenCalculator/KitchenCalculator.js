@@ -7,16 +7,15 @@ import { Button } from 'react-bootstrap';
 
 
 
-
 class KitchenCalculator extends Component {
   state = {
+    kitchenSize: " ",
     cabinetsLength: " ",
     countertopSize: " ",
+    ceilingHeight: " ",
     cabinetsType: " ",
     countertopMaterial: " ",
     kitchenFixtures: " ",
-    kitchenSize: " ",
-    ceilingHeight: " ",
     paintWalls: " ",
     floorType: " ",
     appliances: " ",
@@ -33,71 +32,126 @@ class KitchenCalculator extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const {name, value} = event.target;
-    if (this.state.cabinetsLength && this.state.countertopSize && this.state.cabinetsType && this.state.countertopMaterial && this.state.kitchenFixtures && this.state.kitchenSize && this.state.ceilingHeight && this.state.paintWalls && this.state.floorType && this.state.appliances) {
-      console.log(this.state.cabinetsLength + this.state.countertopSize + this.state.cabinetsType);
-      this.calculateCost();
-      this.setState({
-        [name]:value
-      });
-    }
+    if (this.state.kitchenSize && 
+        this.state.cabinetsLength && 
+        this.state.countertopSize && 
+        this.state.ceilingHeight && 
+        this.state.cabinetsType && 
+        this.state.countertopMaterial && 
+        this.state.kitchenFixtures && 
+        this.state.paintWalls &&
+        this.state.floorType && 
+        this.state.appliances) {
+          this.calculateCost();
+          this.setState({
+            [name]:value
+        });
+      } 
   };
 
-  calculateCost = (size, area, quality) => {
-    const laborCostPerHr = 80;
-    const areaFloorsHrPerSqFt = 0.5;
-    const areaFloorsWallHrPerSqFt = 1;
-    const lowEndPerSqFt = 25;
-    const midRangePerSqFt = 50;
-    const luxuryPerSqFt = 100;
-    let areaFloorsCost;
-    let areaFloorsWallCost;
-    let lowEndCost;
-    let midRangeCost;
-    let luxuryCost;
+  calculateCost = () => {
+    const laborCostPerHr = 75;
+   {/* paint cost per sq ft */} 
+    const paintCostPerSqFt = 22.50;
+  {/* appliances package cost */}
+    const lowEndAppliances = 5000;
+    const midRangeAppliances = 10000;
+    const luxuryAppliances = 30000;
+  {/* countertop cost per sq ft */}
+    const graniteCostPerSqFt = 65;
+    const laminateCostPerSqFt = 35;
+    const quartzCostPerSqFt = 125;
+  {/* fixtures package cost.  Low end doesn't have garbage disposal */}
+    const fixturesLowEnd = 450;
+    const fixturesMidRange = 800;
+    const fixturesPremium = 1200;
+  {/* kitchen flooring cost per sq ft */}
+    const tileFloorCostPerSqFt = 15;
+    const hardwoodFloorCostPerSqFt = 12;
+    const linoleumFloorCostPerSqFt = 7.50;
+    const laminateFloorCostPerSqFt = 10;
+  {/* cabinet cost per ln ft */}
+    const basicCabinetCostPerLnFt = 150;
+    const enhancedCabinetCostPerLnFt = 225;
+    const premiumCabinetCostPerLnFt = 325;
+
+    let paintCost;
     let totalCost;
-    let selectedArea;
-    let selectedQuality;
+    let countertopCost;
+    let floorCost;
+    let cabinetCost;
+    let fixturesCost;
+    let appliancesCost;
 
-    let areaFloorsTotalLaborHr = this.state.size * areaFloorsHrPerSqFt;
-    let areaFloorsWallTotalLaborHr = this.state.size * areaFloorsWallHrPerSqFt;
     
-
-    {/* cost for install tiles on floors only and selected trim quality */}
-    if (this.state.area === "floors") {
-      areaFloorsCost = laborCostPerHr * areaFloorsTotalLaborHr;
-      if (this.state.quality === "low-end") {
-          lowEndCost = lowEndPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + lowEndCost;
-      } else 
-      if (this.state.quality === "mid-range") {
-          midRangeCost = midRangePerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + midRangeCost;
-      } else
-      if (this.state.quality === "luxury") {
-          luxuryCost = luxuryPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + luxuryCost; 
-      }    
-
-    } else
-    {/* cost for install tiles on floors & walls and selected trim quality */}
-    if (this.state.area === "floors-wall") {
-      areaFloorsWallCost = laborCostPerHr * areaFloorsWallTotalLaborHr;
-      if (this.state.quality === "low-end") {
-          lowEndCost = lowEndPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + lowEndCost;
-      } else 
-      if (this.state.quality === "mid-range") {
-          midRangeCost = midRangePerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + midRangeCost;
-      } else
-      if (this.state.quality === "luxury") {
-          luxuryCost = luxuryPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + luxuryCost; 
-      }    
-
-     }
+    if (this.state.paintWalls === "yes") {
+      paintCost = paintCostPerSqFt * this.state.kitchenSize;
+      console.log("Paint Cost is " + paintCost);
       
-  };
+      if (this.state.floorType === "tile-floor") {
+        floorCost = tileFloorCostPerSqFt * this.state.kitchenSize;
+        console.log("Tile Floor cost is " + floorCost);
+      } else if (this.state.floorType === "hardwood-floor"){
+        floorCost = hardwoodFloorCostPerSqFt * this.state.kitchenSize;
+        console.log("Hardwood floor cost is " + floorCost);
+      } else if (this.state.floorType === "lineoleum-floor"){
+        floorCost = linoleumFloorCostPerSqFt * this.state.kitchenSize;
+        console.log("Linoleum floor cost is " + floorCost);
+      } else if (this.state.floorType === "laminate-floor"){
+        floorCost = laminateFloorCostPerSqFt * this.state.kitchenSize;
+        console.log("Laminate floor cost is " + floorCost);
+      };
+      
+      if (this.state.countertopMaterial === "granite"){
+        countertopCost = graniteCostPerSqFt * this.state.countertopSize;
+        console.log("Granite countertop cost is " + countertopCost);
+      } else if (this.state.countertopMaterial === "laminate"){
+        countertopCost = laminateCostPerSqFt * this.state.countertopSize;
+        console.log("Laminate countertop cost is " + countertopCost);
+      } else if (this.state.countertopMaterial === "quartz"){
+        countertopCost = quartzCostPerSqFt * this.state.countertopSize;
+        console.log("Quartz countertop cost is " + countertopCost);    
+      };
+      
+      if (this.state.cabinetsType === "basic-cab"){
+        cabinetCost = basicCabinetCostPerLnFt * this.state.cabinetsLength;
+        console.log("Basic cabinet cost is " + cabinetCost);
+      } else if (this.state.cabinetsType === "enhanced-cab"){
+        cabinetCost = enhancedCabinetCostPerLnFt * this.state.cabinetsLength;
+        console.log("Enhanced cabinet cost is " + cabinetCost);
+      } else if (this.state.cabinetsType === "premium-cab"){
+        cabinetCost = premiumCabinetCostPerLnFt * this.state.cabinetsLength;
+        console.log("Premium cabinet cost is " + cabinetCost);    
+      };
+    
+      if (this.state.kitchenFixtures === "basic-fix"){
+        fixturesCost = fixturesLowEnd;
+        console.log("Basic fixtures cost is " + fixturesCost);
+      } else if (this.state.kitchenFixtures === "mid-fix"){
+        fixturesCost = fixturesMidRange;
+        console.log("Mid-range fixtures cost is " + fixturesCost);
+      } else if (this.state.kitchenFixtures === "premium-fix"){
+        fixturesCost = fixturesPremium;
+        console.log("Premium fixtures cost is " + fixturesCost);    
+      };
+
+      if (this.state.appliances === "basic-app"){
+        appliancesCost = lowEndAppliances;
+        console.log("Basic appliances cost is " + appliancesCost);
+      } else if (this.state.appliances === "mid-app"){
+        appliancesCost = midRangeAppliances;
+        console.log("Mid-range appliances cost is " + appliancesCost);
+      } else if (this.state.appliances === "premium-app"){
+        appliancesCost = luxuryAppliances;
+        console.log("Premium appliances cost is " + appliancesCost);    
+      };
+
+      this.state.totalCost = paintCost + floorCost + countertopCost + cabinetCost + fixturesCost + appliancesCost;
+      console.log(this.state.totalCost);
+
+   } 
+
+};
 
 
   render() {
@@ -178,20 +232,17 @@ class KitchenCalculator extends Component {
                       <label>sq. ft.</label>
                     </Row>
 
-                    {/* input on cabinets treatment */} 
+                    {/* input on cabinets quality */} 
                     <Row>
                       <Col size="col-md-5">
-                        <label>Cabinets (Install or Reface)</label>
+                        <label>New Install Cabinets</label>
                       </Col>
                       <Col size="col-md-5">
-                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="cabinetsTreatment">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="cabinetsType">
                           <option value="-1" abled>Select Option</option>
-                          <option value="new-basic">New Basic</option>
-                          <option value="new-enhanced">New Enhanced (with Island)</option>
-                          <option value="new-premium">New Premium (with Island)</option>
-                          <option value="ref-basic">Basic Refacing</option>
-                          <option value="ref-enhanced">Enhanced Refacing (with Island)</option>
-                          <option value="ref-premium">Premium Refacing</option>
+                          <option value="basic-cab">Basic</option>
+                          <option value="enhanced-cab">Enhanced (with Island)</option>
+                          <option value="premium-cab">Premium (with Island)</option>
                         </select>
                       </Col>  
                     </Row> 
@@ -221,9 +272,9 @@ class KitchenCalculator extends Component {
                       <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="kitchenFixtures">
                           <option value="-1" abled>Select Option</option>
-                          <option value="basic">Basic</option>
-                          <option value="mid">Mid Range</option>
-                          <option value="premium">Premium</option>
+                          <option value="basic-fix">Basic</option>
+                          <option value="mid-fix">Mid Range</option>
+                          <option value="premium-fix">Premium</option>
                         </select>   
                       </Col>  
                     </Row>
@@ -234,11 +285,12 @@ class KitchenCalculator extends Component {
                         <label>New Kitchen Flooring</label>
                       </Col>
                       <Col size="col-md-5">
-                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="flooring">
+                        <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="floorType">
                           <option value="-1" abled>Select Option</option>
-                          <option value="tile">New Tile Flooring</option>
-                          <option value="hardwood">New Hardwood Flooring</option>
-                          <option value="lineoleum">New Linoleum Flooring</option>
+                          <option value="tile-floor">New Tile Flooring</option>
+                          <option value="hardwood-floor">New Hardwood Flooring</option>
+                          <option value="lineoleum-floor">New Linoleum Flooring</option>
+                          <option value="laminate-floor">New Laminate Flooring</option>
                         </select>   
                       </Col>  
                     </Row>
@@ -252,10 +304,10 @@ class KitchenCalculator extends Component {
                       <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="appliances">
                           <option value="-1" abled>Select Option</option>
-                          <option value="basic">Basic Appliances</option>
-                          <option value="mid">Mid Range Appliances</option>
-                          <option value="premium">Premium Appliances</option>
-                          <option value="premium-builtin">Premium Built-In Appliances</option>
+                          <option value="basic-app">Basic Appliances</option>
+                          <option value="mid-app">Mid Range Appliances</option>
+                          <option value="premium-app">Premium Appliances</option>
+                          <option value="premium-builtin-app">Premium Built-In Appliances</option>
                         </select>   
                       </Col>  
                     </Row>
@@ -269,7 +321,6 @@ class KitchenCalculator extends Component {
                       <Col size="col-md-5">
                         <select defaultValue={this.state.selectValue} onChange={this.handleInputChange} name="paintWalls">
                           <option value="-1" abled>Select Option</option>
-                          <option value="no">No</option>
                           <option value="yes">Yes</option>
                         </select>   
                       </Col>  

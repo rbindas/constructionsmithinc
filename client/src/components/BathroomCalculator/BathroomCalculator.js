@@ -36,12 +36,12 @@ class BathroomCalculator extends Component {
   };
 
   calculateCost = (size, area, quality) => {
-    const laborCostPerHr = 80;
-    const areaFloorsHrPerSqFt = 0.5;
-    const areaFloorsWallHrPerSqFt = 1;
-    const lowEndPerSqFt = 25;
-    const midRangePerSqFt = 50;
-    const luxuryPerSqFt = 100;
+    const laborCostPerHr = 75;
+    const areaFloorsHrPerSqFt = 2;
+    const areaFloorsWallHrPerSqFt = 4;
+    const lowEndPerSqFt = 35;
+    const midRangePerSqFt = 70;
+    const luxuryPerSqFt = 120;
     let areaFloorsCost;
     let areaFloorsWallCost;
     let lowEndCost;
