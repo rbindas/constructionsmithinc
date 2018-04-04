@@ -77,7 +77,6 @@ class Client extends Component {
 
       </div>
 
-    
     );
   }
 }
