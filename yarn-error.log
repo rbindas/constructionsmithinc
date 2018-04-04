@@ -1,14 +1,14 @@
-Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\psmith\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+Arguments:
+  C:\Program Files\nodejs\node.exe C:\Users\wolle\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
 
 PATH: 
-  C:\Users\psmith\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\psmith\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Avaya Modular Messaging;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Avaya Modular Messaging\Common;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\3.6\bin;C:\Ruby24-x64\bin;C:\Program Files\Heroku\bin;C:\Users\psmith\AppData\Roaming\npm;C:\Program Files\Heroku\bin;C:\Program Files\Java\jdk-9.0.4\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\wolle\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\wolle\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Brackets\command;C:\Users\wolle\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Users\wolle\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk-9.0.4\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  6.11.2
+  8.9.3
 
 Platform: 
   win32 x64
@@ -36,9 +36,14 @@ npm manifest:
     },
     "dependencies": {
       "axios": "^0.16.2",
-      "body-parser": "^1.17.2",
+      "bcrypt": "^1.0.3",
+      "body-parser": "^1.18.2",
+      "cookie-parser": "^1.4.3",
       "express": "^4.15.4",
-      "mongoose": "^4.11.7"
+      "express-session": "^1.15.6",
+      "mongoose": "^5.0.12",
+      "passport": "^0.4.0",
+      "passport-local": "^1.0.0"
     }
   }
 
@@ -2291,17 +2296,16 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 3221225786
   Command: C:\WINDOWS\system32\cmd.exe
   Arguments: /d /s /c concurrently "nodemon server.js" "npm run client"
-  Directory: C:\Users\psmith\Desktop\construction-smith-inc-2018\constructionsmithinc
+  Directory: C:\Users\wolle\Desktop\constructionsmithinc
   Output:
   
-      at ProcessTermError.Error (native)
-      at ProcessTermError.MessageError (C:\Users\psmith\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at new ProcessTermError (C:\Users\psmith\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:226:113)
-      at ChildProcess.<anonymous> (C:\Users\psmith\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:30281:17)
-      at emitTwo (events.js:106:13)
-      at ChildProcess.emit (events.js:191:7)
-      at maybeClose (internal/child_process.js:891:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+      at ProcessTermError.MessageError (C:\Users\wolle\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Users\wolle\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Users\wolle\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

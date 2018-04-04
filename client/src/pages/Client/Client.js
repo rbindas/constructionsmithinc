@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row } from "../../components/Grid";
+import { Col, Row, Container } from "../../components/Grid";
 import "./Client.css";
 import { Button } from 'react-bootstrap';
 import API from "../../utils/API";
@@ -7,13 +7,24 @@ import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
 import Iframe from "react-iframe";
 import { List, ListItem } from "../../components/List";
-import Footer from "../../components/Footer";
+import Login from './../../components/login/Login';
 
 
 class Client extends Component {
   state = {
-    videos: []
+    videos: [],
+    currentUser: null
   };
+
+  userLoggedIn() {
+    const userObj = sessionStorage.getItem("user");
+    this.setState({
+      currentUser: {
+        id: userObj.id,
+        username: userObj.user
+      }
+    })
+  }
 
   componentDidMount(){
     this.loadVideos();
@@ -50,6 +61,12 @@ class Client extends Component {
             </Col>
         </Row>
 
+
+        { this.state.currentUser
+          ? ""
+          : <Login callParent={() => this.userLoggedIn()} history={this.props.history}/>
+        }
+
         <Row>
          
               <Col size="col-md-10 col-md-offset-1" id="saved-display">
@@ -76,11 +93,14 @@ class Client extends Component {
         
         </Row>
 
-      <Footer />
+
       </div>
 
+    
     );
   }
 }
+
+
 
 export default Client;

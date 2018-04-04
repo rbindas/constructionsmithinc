@@ -1,11 +1,3 @@
-#del-btn {
-	margin-left: 5%;
-	margin-top: 10px;
-}
-
-#saved-display{
-	padding: 10px;
-}
 .App {
   text-align: center;
 }
@@ -30,5 +22,3 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-
