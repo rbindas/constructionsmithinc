@@ -15,6 +15,7 @@
 h2 {
 	text-align: center;
 	margin-top: 0px;	
+    font-family: 'Montserrat', sans-serif;
 }
 
 #formRow {
@@ -40,11 +41,13 @@ label {
     padding: 15px;
     margin-left: 25px;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 h6 {
     color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #btn {
@@ -73,6 +76,7 @@ h6 {
     margin-left: 30%;
     color: blue;
     font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #seed-videos {

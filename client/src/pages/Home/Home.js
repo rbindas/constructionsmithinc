@@ -24,14 +24,14 @@ class Home extends Component {
             <Col size="col-md-8 col-md-offset-2">
               <h1>Why Hire Us?</h1>
               <img id="divider" src={tileDivider} alt="img" />
-              <p id="intro"> David is a true craftman that does wonderful, quality work.  He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
+              <p id="intro"> David is a true craftsman that does wonderful, quality work.  He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
               </p>
               <Row>
                 <Col size="col-md-6">
                   <img id="home-why" src={homeWhyHire} alt="img" />
                 </Col>
                 <Col size="col-md-6">
-                  <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets up apart from all the rest if a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftman and loves impressing his clients with his beautiful workmanship. It is very important to us that our customers love their completed projects and recommend us to their friends.
+                  <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets us apart from all the rest is a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftsman and loves impressing his clients with his beautiful workmanship. It is very important to us that our customers love their completed projects and recommend us to their friends.
                   </p>
                 </Col>
               </Row>

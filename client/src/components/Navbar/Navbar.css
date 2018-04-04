@@ -17,6 +17,7 @@
   font-weight:bold;
   margin-left:10%;
   margin-top:590px;
+  font-family: 'Montserrat', sans-serif;
 
 }
 .logo {
@@ -49,4 +50,5 @@
 .navbar-default .navbar-nav>li>a {
   color: #000;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }

@@ -10,6 +10,7 @@ select {
 	width: 280px;
 	height: 35px;
 	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #cost-display {

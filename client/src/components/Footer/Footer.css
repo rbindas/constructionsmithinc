@@ -2,6 +2,7 @@
 	margin-top: 10%;
 	padding: 20px;
 	background-color: #e3dfdf;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .stickyFooter {
@@ -9,7 +10,7 @@
 	color: white;
 	height: 35px;
 	padding: 8px;
-	
+	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 }
 
