@@ -21,5 +21,9 @@ export default {
   // Saves an video to the database
   saveVideo: function(videoData) {
     return axios.post("/api/saved", videoData);
+  },
+  // Saves a comment to the database
+  saveComment: function(commentData) {
+    return axios.post("/api/comment", commentData);
   }
 };

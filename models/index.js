@@ -1,4 +1,4 @@
 module.exports = {
   Videos: require("./video"),
-  Comments: require("./comment")
+  Comment: require("./comment")
 };

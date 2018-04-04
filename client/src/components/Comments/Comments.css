@@ -15,9 +15,6 @@
   padding: 20px;
 }
 
-.post-edit {
-
-}
 
 #comment-textarea, #name-input {
   min-height: 50px;
@@ -51,9 +48,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.on {
-  margin-right: 5px;
-}
+
 .comment-text {
   background: white;
   color: #222;

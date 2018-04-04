@@ -16,10 +16,16 @@ class Comments extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    const {name, value} = event.target;
-    if (this.state.name && this.state.text)
-    console.log(this.state.name);
-    console.log(this.state.text);
+    // const {name, text} = event.target;
+    if (this.state.name && this.state.text){
+
+        console.log(this.state.name);
+        console.log(this.state.text);
+        this.saveComment({
+          name: this.state.name,
+          text: this.state.text
+        });
+      }
 
   }
 
@@ -51,7 +57,7 @@ class Comments extends Component {
        
         <div className="callout secondary">
         <h4 className="leave-comment">Add a Comment</h4>
-        <form className="post-edit" ref="commentForm" onSubmit={this.processComment}>
+        <form className="post-edit" ref="commentForm">
           <Row>
           <Col size="col-md-4">
           <input 
