@@ -9,7 +9,7 @@ import Carousel from "../../components/Carousel";
 import BathroomGallery from "../../components/BathroomGallery";
 import KitchenGallery from "../../components/KitchenGallery";
 import OtherGallery from "../../components/OtherGallery";
-
+import Footer from "../../components/Footer";
 
 class Home extends Component {
 
@@ -96,7 +96,7 @@ class Home extends Component {
         </Container>
        </Row> 
                   
-              
+       <Footer />       
         </div>
 
     

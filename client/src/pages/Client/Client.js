@@ -7,6 +7,8 @@ import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
 import Iframe from "react-iframe";
 import { List, ListItem } from "../../components/List";
+import Footer from "../../components/Footer";
+
 
 class Client extends Component {
   state = {
@@ -74,7 +76,7 @@ class Client extends Component {
         
         </Row>
 
-
+      <Footer />
       </div>
 
     );

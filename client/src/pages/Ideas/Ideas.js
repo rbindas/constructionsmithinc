@@ -12,6 +12,7 @@ import CarouselInside from "../../components/CarouselInside";
 import BathroomCalculator from "../../components/BathroomCalculator";
 import KitchenCalculator from "../../components/KitchenCalculator";
 import FloorReplacementCalculator from "../../components/FloorReplacementCalculator";
+import Footer from "../../components/Footer";
 
 class Ideas extends Component {
   state = {
@@ -57,6 +58,7 @@ class Ideas extends Component {
   render() {
   
     return (
+   
       <div>
       <CarouselInside />
       <Row>
@@ -178,16 +180,14 @@ class Ideas extends Component {
           <FloorReplacementCalculator />
 
           <br />
+          <br />
+          <br />
 
 
-
-
-
-
-
-              
+          <Footer />             
         </div>
-
+       
+     
     
     );
   }

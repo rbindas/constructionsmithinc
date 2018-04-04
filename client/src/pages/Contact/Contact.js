@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 import tileDivider from "../../components/img/tileDivider.png";
 import CarouselInside from "../../components/CarouselInside";
 import Comments from "../../components/Comments";
-
+import Footer from "../../components/Footer";
 
 
 class Contact extends Component {
@@ -40,7 +40,7 @@ class Contact extends Component {
               </Row>          
             </Col>
           </Container>
-        
+        <Footer />
       </div>
   
     );
