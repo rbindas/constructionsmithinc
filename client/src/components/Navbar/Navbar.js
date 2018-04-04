@@ -13,13 +13,7 @@ const Navbar = props => (
         </Link>
 
       </div>
-
-
-
-      
-
       <ul className="nav navbar-nav">
-
         <li
           className={
             window.location.pathname === "/" || window.location.pathname === "/home"
@@ -29,9 +23,6 @@ const Navbar = props => (
         >
       
           <Link to="/">Home</Link>
-        </li>
-        <li className={window.location.pathname === "/contact" ? "active" : ""}>
-          <Link to="/contact">Contact</Link>
         </li>
         <li className={window.location.pathname === "/ideas" ? "active" : ""}>
           <Link to="/ideas">Ideas & Tips</Link>

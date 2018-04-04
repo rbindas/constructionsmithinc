@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Ideas from "./pages/Ideas";
-import Contact from "./pages/Contact";
 import Client from "./pages/Client";
 import NoMatch from "./pages/NoMatch";
 import {Container} from "./components/Grid";
@@ -19,7 +18,6 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} /> 
         <Route exact path="/ideas" component={Ideas} />
-        <Route exact path="/contact" component={Contact} />
         <Route exact path="/client" component={Client} />
         <Route component={NoMatch} />
       </Switch>

@@ -1,0 +1,22 @@
+#footer {
+	margin-top: 10%;
+	padding: 20px;
+	background-color: #e3dfdf;
+}
+
+.stickyFooter {
+	background-color: black;
+	color: white;
+	height: 35px;
+	padding: 8px;
+	
+	text-align: center;
+}
+
+#firstCol {
+	margin-left: 15%;
+}
+
+#contactPage {
+	
+}

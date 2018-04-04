@@ -6,11 +6,11 @@ import footerLogo from "../img/footerLogo.png";
 import { Button } from 'react-bootstrap';
 
 const Footer = () => (
-  <div id="footer">
-      <Container fluid>
-        <div>
+  <div>
+      <Container fluid id="footer">
+        
           <Row>
-            <Col size="col-md-3 col-md-offset-2" id="firstCol">
+            <Col size="col-md-3" id="firstCol">
               <img className="footerLogo" src={footerLogo} alt="img" />
               <p className="contactPage">Contact</p>
               <p className="ideasPage">Ideas & Tips</p>
@@ -35,10 +35,10 @@ const Footer = () => (
             </Col>
 
           </Row>
-        </div>
+        </Container>
         <p className="stickyFooter">@Copyright 2018. All Rights Reserved by Construction Smith Inc</p>
 
-      </Container>
+    
 </div>
    
 );
