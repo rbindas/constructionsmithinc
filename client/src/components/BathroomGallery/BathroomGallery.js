@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input } from "../../components/Form";
-import { Button } from 'react-bootstrap';
-
 
 import image1 from  "../img/portfolio/500x375/bathrooms/angie-black-shower-columns.jpg";
 import image1thumb from  "../img/portfolio/150x150/bathrooms/angie-black-shower-columns.jpg";

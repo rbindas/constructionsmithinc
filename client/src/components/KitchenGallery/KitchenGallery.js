@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input } from "../../components/Form";
-import { Button } from 'react-bootstrap';
-
 
 import image1 from  "../img/portfolio/800x600/kitchens/angie-black-kitchen-backsplash (2).jpg";
 import image1thumb from  "../img/portfolio/150x150/kitchens/angie-black-kitchen-backsplash (2).jpg";

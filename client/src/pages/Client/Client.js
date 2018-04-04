@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row } from "../../components/Grid";
 import "./Client.css";
 import { Button } from 'react-bootstrap';
 import API from "../../utils/API";

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input } from "../../components/Form";
 import "./KitchenCalculator.css";
 import { Button } from 'react-bootstrap';
@@ -51,32 +50,30 @@ class KitchenCalculator extends Component {
 
   calculateCost = () => {
     
-   {/* paint cost per sq ft */} 
     const paintCostPerSqFt = 22.50;
-  {/* appliances package cost */}
+
     const lowEndAppliances = 5000;
     const midRangeAppliances = 10000;
     const luxuryAppliances = 30000;
-  {/* countertop cost per sq ft */}
+
     const graniteCostPerSqFt = 65;
     const laminateCostPerSqFt = 35;
     const quartzCostPerSqFt = 125;
-  {/* fixtures package cost.  Low end doesn't have garbage disposal */}
+  
     const fixturesLowEnd = 450;
     const fixturesMidRange = 800;
     const fixturesPremium = 1200;
-  {/* kitchen flooring cost per sq ft */}
+
     const tileFloorCostPerSqFt = 15;
     const hardwoodFloorCostPerSqFt = 12;
     const linoleumFloorCostPerSqFt = 7.50;
     const laminateFloorCostPerSqFt = 10;
-  {/* cabinet cost per ln ft */}
+  
     const basicCabinetCostPerLnFt = 150;
     const enhancedCabinetCostPerLnFt = 225;
     const premiumCabinetCostPerLnFt = 325;
 
     let paintCost;
-    let totalCost;
     let countertopCost;
     let floorCost;
     let cabinetCost;

@@ -20,3 +20,7 @@ select {
 	border: solid 2px grey;
 	background-color: yellow;
 }
+
+h5 {
+	text-align: center;
+}

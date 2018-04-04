@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input } from "../../components/Form";
 import "./BathroomCalculator.css";
 import { Button } from 'react-bootstrap';
-
-
 
 
 class BathroomCalculator extends Component {
@@ -47,15 +44,11 @@ class BathroomCalculator extends Component {
     let lowEndCost;
     let midRangeCost;
     let luxuryCost;
-    let totalCost;
-    let selectedArea;
-    let selectedQuality;
+   
 
     let areaFloorsTotalLaborHr = this.state.size * areaFloorsHrPerSqFt;
     let areaFloorsWallTotalLaborHr = this.state.size * areaFloorsWallHrPerSqFt;
     
-
-    {/* cost for install tiles on floors only and selected trim quality */}
     if (this.state.area === "floors") {
       areaFloorsCost = laborCostPerHr * areaFloorsTotalLaborHr;
       if (this.state.quality === "low-end") {

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input } from "../../components/Form";
 import "./FloorReplacementCalculator.css";
 import { Button } from 'react-bootstrap';
@@ -10,7 +9,8 @@ import { Button } from 'react-bootstrap';
 
 class FloorReplacementCalculator extends Component {
   state = {
-    size: " ",
+    length: " ",
+    width: " ",
     material: " ",
     quality: " ",
     removeOldFloor: " ",
@@ -29,7 +29,8 @@ class FloorReplacementCalculator extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const {name, value} = event.target;
-    if (this.state.size && 
+    if (this.state.length &&
+        this.state.width && 
         this.state.material && 
         this.state.quality && 
         this.state.removeOldFloor && 
@@ -43,59 +44,192 @@ class FloorReplacementCalculator extends Component {
   };
 
   calculateCost = () => {
-    const laborCostPerHr = 75;
-    const areaFloorsHrPerSqFt = 2;
-    const areaFloorsWallHrPerSqFt = 4;
-    const lowEndPerSqFt = 35;
-    const midRangePerSqFt = 70;
-    const luxuryPerSqFt = 120;
-    let areaFloorsCost;
-    let areaFloorsWallCost;
-    let lowEndCost;
-    let midRangeCost;
-    let luxuryCost;
-    let totalCost;
-    let selectedArea;
-    let selectedQuality;
-
-    let areaFloorsTotalLaborHr = this.state.size * areaFloorsHrPerSqFt;
-    let areaFloorsWallTotalLaborHr = this.state.size * areaFloorsWallHrPerSqFt;
+    const lowCarpetCostPerSqFt = 3;
+    const midCarpetCostPerSqFt = 4.11;
+    const hiCarpetCostPerSqFt = 11.11;
     
+    const lowHardwoodCostPerSqFt = 7.50;
+    const midHardwoodCostPerSqFt = 9;
+    const hiHardwoodCostPerSqFt = 11.5;
 
-    {/* cost for install tiles on floors only and selected trim quality */}
-    if (this.state.area === "floors") {
-      areaFloorsCost = laborCostPerHr * areaFloorsTotalLaborHr;
-      if (this.state.quality === "low-end") {
-          lowEndCost = lowEndPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + lowEndCost;
-      } else 
-      if (this.state.quality === "mid-range") {
-          midRangeCost = midRangePerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + midRangeCost;
-      } else
-      if (this.state.quality === "luxury") {
-          luxuryCost = luxuryPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsCost + luxuryCost; 
-      }    
+    const lowLaminateCostPerSqFt = 5;
+    const midLaminateCostPerSqFt = 8.75;
+    const hiLaminateCostPerSqFt = 10.5;
 
-    } else
-    {/* cost for install tiles on floors & walls and selected trim quality */}
-    if (this.state.area === "floors-wall") {
-      areaFloorsWallCost = laborCostPerHr * areaFloorsWallTotalLaborHr;
-      if (this.state.quality === "low-end") {
-          lowEndCost = lowEndPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + lowEndCost;
-      } else 
-      if (this.state.quality === "mid-range") {
-          midRangeCost = midRangePerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + midRangeCost;
-      } else
-      if (this.state.quality === "luxury") {
-          luxuryCost = luxuryPerSqFt * this.state.size;
-          this.state.totalCost = areaFloorsWallCost + luxuryCost; 
-      }    
+    const lowTileCostPerSqFt = 8.50;
+    const midTileCostPerSqFt = 12.5;
+    const hiTileCostPerSqFt = 15.5;
 
-     }
+    const lowLinoleumCostPerSqFt = 5.50;
+    const midLinoleumCostPerSqFt = 6;
+    const hiLinoleumCostPerSqFt = 6.5;
+
+    const lowStoneCostPerSqFt = 19;
+    const midStoneCostPerSqFt = 23;
+    const hiStoneCostPerSqFt = 25;
+
+    const remCarpetCostPerSqFt = 1.25;
+    const remHardwoodCostPerSqFt = 3;
+    const remLaminateCostPerSqFt = 1.25;
+    const remTileCostPerSqFt = 3.25;
+
+    const installSubCostPerSqFt = 3;
+    const installTrimCostPerLnFt = 10.50;
+
+    let totalSqFt = this.state.length * this.state.width;
+    console.log("total sqft is " + totalSqFt);
+    let totalLnFt = (this.state.length * 2) + (this.state.width * 2);
+    console.log("total ln ft is " + totalLnFt);
+    let materialCost;
+    let remFloorCost;
+    let installSubFloorCost;
+    let installTrimCost;
+
+
+    if (this.state.installSubfloor === "yes") {
+      installSubFloorCost = installSubCostPerSqFt * totalSqFt;
+      console.log("install subfloor cost is " + installSubFloorCost);
+      if (this.state.installTrim === "no") {
+        installTrimCost = 0;
+        } else {
+          installTrimCost = installTrimCostPerLnFt * totalLnFt;
+          console.log("install trim cost is " + installTrimCost);
+        };
+      if (this.state.material === "carpets") {
+        if (this.state.quality === "low-end") {
+            materialCost = lowCarpetCostPerSqFt * totalSqFt;
+          } else if (this.state.quality === "mid-range") {
+            materialCost = midCarpetCostPerSqFt * totalSqFt;
+          } else if (this.state.quality === "hi-end") {
+            materialCost = hiCarpetCostPerSqFt * totalSqFt;
+            };    
+      } else if (this.state.material === "hardwood") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowHardwoodCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midHardwoodCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiHardwoodCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "laminate") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowLaminateCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midLaminateCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiLaminateCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "naturalStone") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowStoneCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midStoneCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiStoneCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "porcelain") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowTileCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midTileCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiTileCostPerSqFt * totalSqFt;
+            };           
+      } else if (this.state.material === "vinyl") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowLinoleumCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midLinoleumCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiLinoleumCostPerSqFt * totalSqFt;
+            };
+          };
+           console.log(this.state.material + this.state.quality + materialCost);            
+      if (this.state.removeOldFloor === "no") {
+        remFloorCost = 0;        
+        } else if (this.state.removeOldFloor === "yes-carpet") {
+          remFloorCost = remCarpetCostPerSqFt * totalSqFt;      
+        } else if (this.state.removeOldFloor === "yes-hardwood") {
+          remFloorCost = remHardwoodCostPerSqFt * totalSqFt;    
+        } else if (this.state.removeOldFloor === "yes-laminate") {
+          remFloorCost = remLaminateCostPerSqFt * totalSqFt;  
+        } else if (this.state.removeOldFloor === "yes-tile") {
+          remFloorCost = remTileCostPerSqFt * totalSqFt;  
+        }; 
+        console.log(this.state.removeOldFloor + remFloorCost);
+      this.state.totalCost = installSubFloorCost + installTrimCost + materialCost + remFloorCost;  
+    }
+      else if (this.state.installSubfloor === "no") {
+        if (this.state.installTrim === "no") {
+        installTrimCost = 0;
+        } else {
+          installTrimCost = installTrimCostPerLnFt * totalLnFt;
+          console.log("install trim cost is " + installTrimCost);
+        };
+      if (this.state.material === "carpets") {
+        if (this.state.quality === "low-end") {
+            materialCost = lowCarpetCostPerSqFt * totalSqFt;
+          } else if (this.state.quality === "mid-range") {
+            materialCost = midCarpetCostPerSqFt * totalSqFt;
+          } else if (this.state.quality === "hi-end") {
+            materialCost = hiCarpetCostPerSqFt * totalSqFt;
+            };    
+      } else if (this.state.material === "hardwood") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowHardwoodCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midHardwoodCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiHardwoodCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "laminate") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowLaminateCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midLaminateCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiLaminateCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "naturalStone") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowStoneCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midStoneCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiStoneCostPerSqFt * totalSqFt;
+            };
+      } else if (this.state.material === "porcelain") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowTileCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midTileCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiTileCostPerSqFt * totalSqFt;
+            };           
+      } else if (this.state.material === "vinyl") {
+            if (this.state.quality === "low-end") {
+              materialCost = lowLinoleumCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "mid-range") {
+              materialCost = midLinoleumCostPerSqFt * totalSqFt;
+            } else if (this.state.quality === "hi-end") {
+              materialCost = hiLinoleumCostPerSqFt * totalSqFt;
+            };
+          };
+           console.log(this.state.material + this.state.quality + materialCost);            
+      if (this.state.removeOldFloor === "no") {
+        remFloorCost = 0;        
+        } else if (this.state.removeOldFloor === "yes-carpet") {
+          remFloorCost = remCarpetCostPerSqFt * totalSqFt;      
+        } else if (this.state.removeOldFloor === "yes-hardwood") {
+          remFloorCost = remHardwoodCostPerSqFt * totalSqFt;    
+        } else if (this.state.removeOldFloor === "yes-laminate") {
+          remFloorCost = remLaminateCostPerSqFt * totalSqFt;  
+        } else if (this.state.removeOldFloor === "yes-tile") {
+          remFloorCost = remTileCostPerSqFt * totalSqFt;  
+        }; 
+        console.log(this.state.removeOldFloor + remFloorCost);
+      this.state.totalCost = installTrimCost + materialCost + remFloorCost;  
+      }
       
   };
 
@@ -118,19 +252,33 @@ class FloorReplacementCalculator extends Component {
                 <form>
                  <div className="panel-body">
                     
-                    {/* input on the room size */}
+                    {/* input on the floor size */}
                     <Row>
                       <Col size="col-md-5">
-                        <label>Room Size</label>
+                        <label>Floor Size</label>
                       </Col>
-                      <Col size="col-md-5">
+                      <Col size="col-md-2">
                         <Input 
-                          value={this.state.size}
+                          value={this.state.length}
                           onChange={this.handleInputChange}
-                          name="size"
-                          />   
+                          name="length"
+                          placeholder="length ft"
+                          />
                       </Col>
-                      <label>sq. ft.</label>
+                      <Col size="col-md-1">
+                        <h5>X</h5>
+                      </Col>
+                      <Col size="col-md-2">
+                        <Input 
+                          value={this.state.width}
+                          onChange={this.handleInputChange}
+                          name="width"
+                          placeholder="width ft"
+                          />    
+                      </Col>
+                     
+                      
+
                     </Row>
 
                     {/* input on flooring material */} 

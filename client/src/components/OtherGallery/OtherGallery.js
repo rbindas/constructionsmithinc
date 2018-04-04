@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input } from "../../components/Form";
-import { Button } from 'react-bootstrap';
-
 
 import image1 from  "../img/portfolio/500x375/other/angie-black-dining-room.jpg";
 import image1thumb from  "../img/portfolio/150x150/other/angie-black-dining-room.jpg";
@@ -300,7 +295,7 @@ class OtherGallery extends Component {
       },
             {
         original: image40,
-        thumbnail: image41thumb
+        thumbnail: image40thumb
       },
             {
         original: image41,
