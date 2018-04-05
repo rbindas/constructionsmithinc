@@ -10,6 +10,7 @@ import BathroomGallery from "../../components/BathroomGallery";
 import KitchenGallery from "../../components/KitchenGallery";
 import OtherGallery from "../../components/OtherGallery";
 import Footer from "../../components/Footer";
+import Comments from "../../components/Comments";
 
 class Home extends Component {
 
@@ -72,30 +73,35 @@ class Home extends Component {
 
         <Row>
           <Container fluid id="portfolio-section">
-            <Col size="col-md-8 col-md-offset-2">
+            <Col size="col-md-12">
               <h1>Project Porfolio</h1>
               <img id="divider" src={tileDivider} alt="img" />
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
               
               <Row>
-                <Col size="col-md-4">
+                <Col size="col-md-3">
                 <h3>Bathrooms</h3>
                   <BathroomGallery />
                 </Col>
-                <Col size="col-md-4">
+                <Col size="col-md-3">
                 <h3>Kitchens</h3>
                   <KitchenGallery />
                 </Col>
-                <Col size="col-md-4">
+                <Col size="col-md-3">
                 <h3>Other Projects</h3>
                   <OtherGallery />
                 </Col>
+                <Col id="comments-box" size="col-md-3">
+                <h3>&nbsp;</h3>
+                  <Comments />
+                </Col>
               </Row>
           </Col>
+
         </Container>
        </Row> 
-                  
+                 
        <Footer />       
         </div>
 

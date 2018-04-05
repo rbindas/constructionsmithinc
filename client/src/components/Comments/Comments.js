@@ -52,10 +52,11 @@ class Comments extends Component {
       <div className="callout">
      
        <Container fluid id="comments-box">
-             
+       <div></div>      
+      
       {/* Submit comment section */}
        
-        <div className="callout secondary">
+        <div>
         <h4 className="leave-comment">Add a Comment</h4>
         <form className="post-edit" ref="commentForm">
           <Row>
@@ -69,9 +70,9 @@ class Comments extends Component {
             required/>
            </Col>
           </Row>
-
+          <br />
           <Row>
-          <Col size="col-md-4">
+          <Col id="comment-textarea" size="col-md-4">
           <textarea 
             ref="text" 
             placeholder="Add your comment here" 
@@ -80,6 +81,7 @@ class Comments extends Component {
             required/>
           </Col>
            </Row> 
+           <br />
           <Button bsStyle="primary" onClick={this.handleFormSubmit}
                       >Add Comment
                     </Button>
