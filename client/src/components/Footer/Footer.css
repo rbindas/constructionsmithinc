@@ -1,6 +1,6 @@
 #footer {
 	margin-top: 10%;
-	padding: 20px;
+	padding: 10px;
 	background-color: #e3dfdf;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -18,6 +18,42 @@
 	margin-left: 15%;
 }
 
-#contactPage {
-	
+img {
+	padding-bottom: 10px;
 }
+
+#homePage {
+	padding-top: 70px;
+}
+
+#secondCol, #thirdCol {
+	padding-top: 30px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+#footerAppt{
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.fa.fa-facebook-square {
+	padding-top: 10px;
+	font-size: 40px;
+	color: #3b5998;
+	padding-left: 20px;
+}
+
+#social-icon {
+	display: inline-block;
+}
+
+.fa.fa-linkedin-square {
+	font-size: 40px;
+	color: #0077b5;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+

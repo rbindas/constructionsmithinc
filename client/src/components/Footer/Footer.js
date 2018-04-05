@@ -12,9 +12,10 @@ const Footer = () => (
           <Row>
             <Col size="col-md-3" id="firstCol">
               <img className="footerLogo" src={footerLogo} alt="img" />
-              <p className="contactPage">Contact</p>
-              <p className="ideasPage">Ideas & Tips</p>
-              <p className="client">Clients</p>
+              <p>Construction Smith Inc.</p>
+              <p>Painesville, OH</p>
+              <p>440.479.2031</p>
+              <a href="mailto: tilemandavid@gmail.com">tilemandavid@gmail.com</a>
             </Col>
         
             <Col size="col-md-3" id="secondCol">
@@ -27,16 +28,17 @@ const Footer = () => (
             </Col>
 
             <Col size="col-md-3" id="thirdCol">
-              <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
-              <p>Construction Smith Inc.</p>
-              <p>Painesville, OH</p>
-              <p>440.479.2031</p>
-              <p>tilemandavid@gmail.com</p>
+              <Button id="footerAppt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
+              <p><strong>Fully Bonded and Insured</strong></p>
+              <Row id="social-icon">
+                <i className="fa fa-facebook-square" />
+                <i className="fa fa-linkedin-square" />
+              </Row>
             </Col>
 
           </Row>
         </Container>
-        <p className="stickyFooter">@Copyright 2018. All Rights Reserved by Construction Smith Inc</p>
+        <p className="stickyFooter">&copy; Copyright 2018. All Rights Reserved by Construction Smith Inc</p>
 
     
 </div>
