@@ -3,10 +3,20 @@
 	margin-top: 10px;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+#divider {
+  margin-left: 40%;
+}
+
 #saved-display{
 	padding: 10px;
 }
-.App {
+
+/*.App {
   text-align: center;
 }
 
@@ -29,6 +39,6 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}*/
 
 

@@ -1,15 +1,25 @@
-.callout {
-  border: solid thin #cccccc;
-  border-radius: 20px;
-  padding-bottom: 20px;
+button {
+	font-family: 'Montserrat', sans-serif;
 }
 
 #name-input {
 	width: 90%;
 	padding-left: 15px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #comment-textarea {
 	width: 90%;
 	padding-left: 15px;
+	font-family: 'Montserrat', sans-serif;
 }
+
+.btn.btn-lg.btn-success {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#myModalLabel {
+	font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+}
+

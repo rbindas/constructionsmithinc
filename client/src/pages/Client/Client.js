@@ -56,7 +56,7 @@ class Client extends Component {
         <CarouselInside />
         <Row> 
             <Col size="col-md-10 col-md-offset-1">
-              <h3>Saved Ideas and Tips</h3>
+              <h1>Saved Ideas and Tips</h1>
               <img id="divider" src={tileDivider} alt="img" />
             </Col>
         </Row>

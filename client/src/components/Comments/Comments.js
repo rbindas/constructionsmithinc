@@ -49,7 +49,6 @@ class Comments extends Component {
   render(){
     return(
       <div>
-      
       <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
 
       <div className="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
@@ -61,44 +60,40 @@ class Comments extends Component {
                 <span aria-hidden="true">×</span>
               </button>
             </div>
-          <div className="modal-body">
-            <form className="post-edit" ref="commentForm">
-          <Row>
-          <Col id="name-input">
-          <Input 
-            type="text" 
-            ref="name" 
-            placeholder="Your Name" 
-            value={this.state.name} 
-            onChange={this.changeName.bind(this)}
-            required/>
-           </Col>
-          </Row>
-          <br />
-          <Row>
-          <Col id="comment-textarea">
-          <TextArea 
-            ref="text" 
-            placeholder="Add your comment here" 
-            value={this.state.text} 
-            onChange={this.changeText.bind(this)}
-            required/>
-          </Col>
-           </Row> 
-           <br />
-          
-        </form>
-          
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-          <Button bsStyle="primary" onClick={this.handleFormSubmit} data-dismiss="modal"
+            <div className="modal-body">
+              <form className="post-edit" ref="commentForm">
+                <Row>
+                  <Col id="name-input">
+                    <Input 
+                      type="text" 
+                      ref="name" 
+                      placeholder="Your Name" 
+                      value={this.state.name} 
+                      onChange={this.changeName.bind(this)}
+                      required/>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col id="comment-textarea">
+                    <TextArea 
+                      ref="text" 
+                      placeholder="Add your comment here" 
+                      value={this.state.text} 
+                      onChange={this.changeText.bind(this)}
+                      required/>
+                  </Col>
+                </Row> 
+              </form>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+              <Button bsStyle="primary" onClick={this.handleFormSubmit} data-dismiss="modal"
                       >Add Comment
                     </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
        
     </div>     
     );
