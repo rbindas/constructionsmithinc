@@ -3,3 +3,13 @@
   border-radius: 20px;
   padding-bottom: 20px;
 }
+
+#name-input {
+	width: 90%;
+	padding-left: 15px;
+}
+
+#comment-textarea {
+	width: 90%;
+	padding-left: 15px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input } from "../../components/Form";
+import { Input, TextArea } from "../../components/Form";
 import { Button } from 'react-bootstrap';
 import API from "../../utils/API";
 import "./Comments.css";
@@ -12,7 +12,6 @@ class Comments extends Component {
     name:"",
     text:""
   }
-
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -49,19 +48,24 @@ class Comments extends Component {
 
   render(){
     return(
-      <div className="callout">
-     
-       <Container fluid id="comments-box">
-       <div></div>      
+      <div>
       
-      {/* Submit comment section */}
-       
-        <div>
-        <h4 className="leave-comment">Add a Comment</h4>
-        <form className="post-edit" ref="commentForm">
+      <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
+
+      <div className="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title" id="myModalLabel">Add a Comment </h4>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          <div className="modal-body">
+            <form className="post-edit" ref="commentForm">
           <Row>
-          <Col size="col-md-4">
-          <input 
+          <Col id="name-input">
+          <Input 
             type="text" 
             ref="name" 
             placeholder="Your Name" 
@@ -72,8 +76,8 @@ class Comments extends Component {
           </Row>
           <br />
           <Row>
-          <Col id="comment-textarea" size="col-md-4">
-          <textarea 
+          <Col id="comment-textarea">
+          <TextArea 
             ref="text" 
             placeholder="Add your comment here" 
             value={this.state.text} 
@@ -82,13 +86,21 @@ class Comments extends Component {
           </Col>
            </Row> 
            <br />
-          <Button bsStyle="primary" onClick={this.handleFormSubmit}
+          
+        </form>
+          
+        </div>
+        <div className="modal-footer">
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+          <Button bsStyle="primary" onClick={this.handleFormSubmit} data-dismiss="modal"
                       >Add Comment
                     </Button>
-        </form>
+        </div>
       </div>
-     </Container>
-     </div>     
+    </div>
+  </div>
+       
+    </div>     
     );
   }
 }
