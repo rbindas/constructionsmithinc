@@ -13,18 +13,10 @@ import Login from './../../components/login/Login';
 class Client extends Component {
   state = {
     videos: [],
-    currentUser: null
+    
   };
 
-  userLoggedIn() {
-    const userObj = sessionStorage.getItem("user");
-    this.setState({
-      currentUser: {
-        id: userObj.id,
-        username: userObj.user
-      }
-    })
-  }
+  
 
   componentDidMount(){
     this.loadVideos();
@@ -53,21 +45,15 @@ class Client extends Component {
   
     return (
       <div>
-        <CarouselInside />
-        <Row> 
+        
+          <Row> 
             <Col size="col-md-10 col-md-offset-1">
               <h1>Saved Ideas and Tips</h1>
               <img id="divider" src={tileDivider} alt="img" />
             </Col>
-        </Row>
+          </Row>
 
-
-        { this.state.currentUser
-          ? ""
-          : <Login callParent={() => this.userLoggedIn()} history={this.props.history}/>
-        }
-
-        <Row>
+          <Row>
          
               <Col size="col-md-10 col-md-offset-1" id="saved-display">
                 {this.state.videos.length? (
@@ -90,10 +76,8 @@ class Client extends Component {
                     <h3>No Saved Videos to Display</h3>
                   )}
               </Col>
-        
-        </Row>
-
-
+            </Row>
+          
       </div>
 
     

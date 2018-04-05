@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Ideas from "./pages/Ideas";
 import Client from "./pages/Client";
+import Authentication from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import {Container} from "./components/Grid";
 import Navbar from "./components/Navbar";
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path="/" component={Home} /> 
         <Route exact path="/ideas" component={Ideas} />
         <Route exact path="/client" component={Client} />
+        <Route exact path="/login" component={Authentication} />
         <Route component={NoMatch} />
       </Switch>
     </Container>

@@ -71,9 +71,8 @@ class Comments extends Component {
   render(){
     return(
 
-      <div>
+    <div>
       <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
-
       <div className="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -118,7 +117,11 @@ class Comments extends Component {
         </div>
       </div>
        
-    </div>
+      
+
+
+
+  </div>
     
          
     );
