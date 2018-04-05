@@ -25,5 +25,8 @@ export default {
   // Saves a comment to the database
   saveComment: function(commentData) {
     return axios.post("/api/comment", commentData);
+  },
+  getComments: function() {
+    return axios.get("/api/comment");
   }
 };

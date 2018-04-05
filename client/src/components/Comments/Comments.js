@@ -13,6 +13,21 @@ class Comments extends Component {
     text:""
   }
 
+  componentDidMount() {
+    this.loadComments();
+  }
+
+  loadComments = () => {
+    API.getComments()
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          comments: res.data
+        })
+      })
+      .catch(err => console.log(err));
+  }
+
   handleFormSubmit = event => {
     event.preventDefault();
     // const {name, text} = event.target;
@@ -26,6 +41,13 @@ class Comments extends Component {
         });
       }
 
+  }
+
+  onChange = event => {
+    this.setState({
+      name:"",
+      text:""
+    })
   }
 
   changeName = event => {
@@ -48,6 +70,7 @@ class Comments extends Component {
 
   render(){
     return(
+
       <div>
       <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
 
@@ -95,7 +118,9 @@ class Comments extends Component {
         </div>
       </div>
        
-    </div>     
+    </div>
+    
+         
     );
   }
 }

@@ -3,17 +3,17 @@ import axios from "axios";
 
 
 export default {
-  // Get saved comments
+  // Get comment comments
   getComments: function() {
-    return axios.get("/api/saved");
+    return axios.get("/api/comment");
   },
   // Deletes comments with the given id
   deleteComments: function(id) {
-    return axios.delete("/api/saved/" + id);
+    return axios.delete("/api/comment/" + id);
   },
   // Saves comments database
   saveComment: function(commentData) {
-    return axios.post("/api/saved", commentData);
+    return axios.post("/api/comment", commentData);
   },
   
 };
