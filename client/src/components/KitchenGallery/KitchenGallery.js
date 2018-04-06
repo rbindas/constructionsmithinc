@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 import image1 from  "../img/portfolio/800x600/kitchens/angie-black-kitchen-backsplash (2).jpg";
 import image1thumb from  "../img/portfolio/150x150/kitchens/angie-black-kitchen-backsplash (2).jpg";
@@ -33,9 +35,6 @@ import image10thumb from  "../img/portfolio/150x150/kitchens/pink-backsplash.jpg
 import image11 from  "../img/portfolio/800x600/kitchens/pink-backsplash2.jpg";
 import image11thumb from  "../img/portfolio/150x150/kitchens/pink-backsplash2.jpg";
 
-
-import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
 
 
 

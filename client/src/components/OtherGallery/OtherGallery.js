@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 import image1 from  "../img/portfolio/500x375/other/angie-black-dining-room.jpg";
 import image1thumb from  "../img/portfolio/150x150/other/angie-black-dining-room.jpg";
@@ -52,8 +54,6 @@ import image17thumb from  "../img/portfolio/150x150/other/bloom-nice-fireplace-s
 import image18 from  "../img/portfolio/500x375/other/bloom-nook.jpg";
 import image18thumb from  "../img/portfolio/150x150/other/bloom-nook.jpg"
 
-
-
 import image20 from  "../img/portfolio/500x375/other/bloom-stone-alcove.jpg";
 import image20thumb from  "../img/portfolio/150x150/other/bloom-stone-alcove.jpg"
 
@@ -68,8 +68,6 @@ import image23thumb from  "../img/portfolio/150x150/other/bloom-stone-wood-tile.
 
 import image24 from  "../img/portfolio/500x375/other/bloom-T-shaped-bar.jpg";
 import image24thumb from  "../img/portfolio/150x150/other/bloom-T-shaped-bar.jpg"
-
-
 
 import image26 from  "../img/portfolio/500x375/other/bloom-wine-cellar.jpg";
 import image26thumb from  "../img/portfolio/150x150/other/bloom-wine-cellar.jpg"
@@ -132,8 +130,6 @@ import image45 from  "../img/portfolio/500x375/other/IMG_2192.jpg";
 import image45thumb from  "../img/portfolio/150x150/other/IMG_2192.jpg"
 
 
-import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
 
 
 class OtherGallery extends Component {

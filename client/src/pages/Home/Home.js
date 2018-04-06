@@ -12,8 +12,8 @@ import OtherGallery from "../../components/OtherGallery";
 import Footer from "../../components/Footer";
 import Comments from "../../components/Comments";
 
-class Home extends Component {
 
+class Home extends Component {
 
   render() {
   

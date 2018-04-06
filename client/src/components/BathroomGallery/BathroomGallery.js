@@ -93,8 +93,6 @@ import image30thumb from  "../img/portfolio/150x150/bathrooms/berzin-shower.jpg"
 import image31 from  "../img/portfolio/500x375/bathrooms/berzin-tub.jpg";
 import image31thumb from  "../img/portfolio/150x150/bathrooms/berzin-tub.jpg";
 
-
-
 import image34 from  "../img/portfolio/500x375/bathrooms/IMG_0896.jpg";
 import image34thumb from  "../img/portfolio/150x150/bathrooms/IMG_0896.jpg";
 
@@ -223,7 +221,6 @@ import image75thumb from  "../img/portfolio/150x150/bathrooms/smith-bathroom-tub
 
 import image76 from  "../img/portfolio/500x375/bathrooms/tub2.jpg";
 import image76thumb from  "../img/portfolio/150x150/bathrooms/tub2.jpg";
-
 
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
