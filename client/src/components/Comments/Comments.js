@@ -43,7 +43,9 @@ class Comments extends Component {
         })
             console.log("now running load comments");
             this.loadComments()    
+
       }
+
   }
 
   changeName = event => {
@@ -67,6 +69,7 @@ class Comments extends Component {
 
   render(){
     return(
+     
 
       <div>
        
@@ -95,7 +98,7 @@ class Comments extends Component {
                   </Col>
                 </Row>
                 <Row>
-                  <Col id="comment-textarea">
+                  <Col id="comment-input">
                     <FormControl 
                       type="text" 
                       bsSize="large"
@@ -121,8 +124,8 @@ class Comments extends Component {
           {this.state.comments? (this.state.comments.map(comment => {
             return (
               <div id="comment-textarea" key={comment._id}>
-                <p style={{fontSize: "16px"}}>{comment.text}</p>
-                <p style={{fontSize: "16px", fontWeight: "bold"}}><strong><i>{comment.name}</i></strong></p>
+                <p>{comment.text}</p>
+                <p><strong><i>{comment.name}</i></strong></p>
               </div>
               )
           })):null
