@@ -24,16 +24,18 @@ class Home extends Component {
           <Container fluid id="why-hire-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1>Why Hire Us?</h1>
-              <img id="divider" src={tileDivider} alt="img" />
-              <p id="intro"> David is a true craftsman that does wonderful, quality work.  He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
+              <img id="divider" src={tileDivider} alt="Quartz Counters" />
+              <p id="intro">David is a true craftsman that does wonderful, quality work. He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
               </p>
               <Row>
                 <Col size="col-md-6">
-                  <img id="home-why" src={homeWhyHire} alt="img" />
+                  <img id="home-why" src={homeWhyHire} alt="Granite" />
                 </Col>
                 <Col size="col-md-6">
-                  <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets us apart from all the rest is a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftsman and loves impressing his clients with his beautiful workmanship. It is very important to us that our customers love their completed projects and recommend us to their friends.
+                  <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets him apart from all the rest is a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftsman and loves impressing his clients with his beautiful workmanship. Customer Satisfaction is our main goal. It is very important to us that our customers love their completed projects and recommend us to their friends.
                   </p>
+                  <br/>
+                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
                 </Col>
               </Row>
           </Col>
@@ -44,12 +46,13 @@ class Home extends Component {
           <Container fluid id="services-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1>Our Services</h1>
-              <img id="divider" src={tileDivider} alt="img" />
-              <p id="summary"> From project design and layout services to demo and installation, we will guide you with every step of your project.
+              <img id="divider" src={tileDivider} alt="Ceramic Tile" />
+              <p id="summary">From project design and layout services to demo and installation, we will guide you with every step of your project.
               </p>
+
               <Row>
                 <Col size="col-md-6">
-                  <img id="home-why" src={homeOurServices} alt="img" />
+                  <img id="home-why" src={homeOurServices} alt="Wood Flooring" />
                 </Col>
                 <Col size="col-md-6">
                   <ul>
@@ -61,9 +64,10 @@ class Home extends Component {
                     <li> Residential Projects </li>
                     <li> Home Renovations or New Construction Projects </li>
                     <li> Granite Counters </li>
-                    <li> Flooring - Marble, Wood, Ceramics or Porcelain Tile </li>
-                    <li> ...and so much more! </li>
+                    <li> Flooring - Marble, Wood, Ceramic or Porcelain Tile, Luxury Vinyl and Carpet </li>
+                    <li> ...plus so much more! </li>
                   </ul>
+                  <br/>
                   <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
                 </Col>
               </Row>
@@ -76,6 +80,7 @@ class Home extends Component {
             <Col size="col-md-12">
               <h1>Project Porfolio</h1>
               <img id="divider" src={tileDivider} alt="img" />
+
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
               
@@ -109,5 +114,6 @@ class Home extends Component {
     );
   }
 }
+
 
 export default Home;

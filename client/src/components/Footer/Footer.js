@@ -14,16 +14,16 @@ const Footer = () => (
               <img className="footerLogo" src={footerLogo} alt="img" />
               <p>Construction Smith Inc.</p>
               <p>Painesville, OH</p>
-              <p>440.479.2031</p>
+              <p>440.479.2028</p>
               <a href="mailto: tilemandavid@gmail.com">tilemandavid@gmail.com</a>
             </Col>
         
             <Col size="col-md-3" id="secondCol">
-              <p>Commercial & Residential Projects</p>
-              <p>Bathroom Renovation</p>
-              <p>Kitchen Renovation</p>
-              <p>Basements, Pools and more...</p>
-              <p>Granite, Marble, Tile, Wood</p>
+              <p>Residential and Commercial Projects</p>
+              <p>Bathroom Renovations</p>
+              <p>Kitchen Renovations</p>
+              <p>Basements, Pools, Fireplaces and more...</p>
+              <p>Granite, Marble, Quartz, Tile, Wood</p>
               <p>New Construction Projects</p>
             </Col>
 
@@ -38,7 +38,7 @@ const Footer = () => (
 
           </Row>
         </Container>
-        <p className="stickyFooter">&copy; Copyright 2018. All Rights Reserved by Construction Smith Inc</p>
+        <p className="stickyFooter">&copy; Copyright 2018. All Rights Reserved, Construction Smith Inc.</p>
 
     
 </div>

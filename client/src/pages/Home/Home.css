@@ -23,16 +23,18 @@ h3 {
 
 }
 
+
 #intro, #summary, #portfolio {
     font-style: italic;
     text-align: center;
     padding: 15px;
-    margin-left: 25px; 
+    margin-left: 23px; 
     font-size: 16px;  
 }
 
 #detail-bio, li {
     font-size: 16px;
+    margin-left:25px;
 }
 
 .list-inline {
@@ -41,12 +43,14 @@ h3 {
 }
 
 #divider {
-	margin-left: 40%;
+	margin-left: 50%;
 
 }
 
 #home-why {
 	float: right;
+    max-width:100%;
+    min-width:50%;
 }
 
 #appt {
