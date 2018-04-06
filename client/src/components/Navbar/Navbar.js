@@ -38,7 +38,7 @@ const Navbar = props => (
           <Link to="/client">Clients</Link>
         </li>
         <li className={window.location.pathname === "/login" ? "active" : ""}>
-          <Link to="/login">Login</Link>
+          <Link to="/login">Login or Register</Link>
         </li>
         <li><a></a></li>
       </ul>

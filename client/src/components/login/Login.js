@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input } from "../../components/Form";
 import { Button } from 'react-bootstrap';
 
+
 class Login extends Component {
    constructor(props) {
       super(props);
@@ -38,7 +39,7 @@ class Login extends Component {
          }).catch(err => {  
             console.log(err);
             this.setState({
-               error: err === 401 ? 'Invalid username or password.' : err.message
+               error: 'Invalid username or password.' 
             });
          });
       }
@@ -48,12 +49,13 @@ class Login extends Component {
       const { error } = this.state;
 
       return (
-         <div>
+         <div style={{marginTop: "175px"}} >
+            <h1>Welcome Back!</h1>
             <Container fluid id="login-box">
                <Row>
-                  <Col size="col-md-3 col-md-offset-2" id="user-inputs">
-                  <form onSubmit={this.handleLogin} style={{marginTop: "150px"}}>
-                     <h3>For Existing Customers</h3>
+                  <Col size="col-md-4 col-md-offset-4" id="user-inputs">
+                  <form onSubmit={this.handleLogin} style={{marginTop: "30px"}}>
+                     <h3>Log In</h3>
                      {error &&
                         <div>
                            {error}
@@ -78,13 +80,14 @@ class Login extends Component {
                      <div>
                        <Button type="submit" bsStyle="primary">Log In</Button> 
                      </div>
+                     <br />
                      <p>or
                      </p>
-                     <p>
+                     <h4>
                         <Link to="/create">
                            Register
                         </Link>
-                     </p>
+                     </h4>
                   </form>
                </Col>   
             </Row>

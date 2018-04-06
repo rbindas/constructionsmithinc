@@ -8,15 +8,13 @@ import CarouselInside from "../../components/CarouselInside";
 import Iframe from "react-iframe";
 import { List, ListItem } from "../../components/List";
 import Login from './../../components/login/Login';
-
+import Footer from "../../components/Footer";
 
 class Client extends Component {
   state = {
     videos: [],
     
   };
-
-  
 
   componentDidMount(){
     this.loadVideos();
@@ -44,11 +42,11 @@ class Client extends Component {
   render() {
   
     return (
-      <div>
+      <div style={{marginTop: "175px"}}>
         
           <Row> 
             <Col size="col-md-10 col-md-offset-1">
-              <h1>Saved Ideas and Tips</h1>
+              <h1>Your Saved Ideas and Tips</h1>
               <img id="divider" src={tileDivider} alt="img" />
             </Col>
           </Row>
@@ -77,7 +75,7 @@ class Client extends Component {
                   )}
               </Col>
             </Row>
-          
+        <Footer />  
       </div>
 
     

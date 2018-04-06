@@ -31,8 +31,8 @@ const Footer = () => (
               <Button id="footerAppt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
               <p><strong>Fully Bonded and Insured</strong></p>
               <Row id="social-icon">
-                <i className="fa fa-facebook-square" />
-                <i className="fa fa-linkedin-square" />
+                <a href="https://www.facebook.com/Construction-Smith-Inc-224425121442895"><i className="fa fa-facebook-square" /></a>
+                <a href="https://www.linkedin.com/in/david-smith-55494a69"><i className="fa fa-linkedin-square" /></a>
               </Row>
             </Col>
 
