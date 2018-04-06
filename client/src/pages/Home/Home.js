@@ -24,7 +24,7 @@ class Home extends Component {
           <Container fluid id="why-hire-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1>Why Hire Us?</h1>
-              <img id="divider" src={tileDivider} alt="Quartz Counters" />
+              <img id="divider1" src={tileDivider} alt="Quartz Counters" />
               <p id="intro">David is a true craftsman that does wonderful, quality work. He has over 30 years of experience and can help you decide what to do with your project by providing ideas on design and layout, as well as the best materials to use, to meet your individual needs.
               </p>
               <Row>
@@ -46,7 +46,7 @@ class Home extends Component {
           <Container fluid id="services-section">
             <Col size="col-md-8 col-md-offset-2">
               <h1>Our Services</h1>
-              <img id="divider" src={tileDivider} alt="Ceramic Tile" />
+              <img id="divider2" src={tileDivider} alt="Ceramic Tile" />
               <p id="summary">From project design and layout services to demo and installation, we will guide you with every step of your project.
               </p>
 
@@ -79,7 +79,7 @@ class Home extends Component {
           <Container fluid id="portfolio-section">
             <Col size="col-md-12">
               <h1>Project Porfolio</h1>
-              <img id="divider" src={tileDivider} alt="img" />
+              <img id="divider3" src={tileDivider} alt="img" />
 
               <p id="portfolio"> View some of the previous work we have completed.
               </p>
