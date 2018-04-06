@@ -69,9 +69,8 @@ class Comments extends Component {
 
   render(){
     return(
-     
-
-      <div>
+    
+    <div>
         <div>
           {this.state.comments? (this.state.comments.map(comment => {
             return (
@@ -84,7 +83,8 @@ class Comments extends Component {
           } 
           
         </div>
-      <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
+
+      <a className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
 
       <div className="modal fade" id="commentModal" tabIndex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
         <div className="modal-dialog">

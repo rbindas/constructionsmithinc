@@ -1,13 +1,12 @@
+
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row } from "../../components/Grid";
 import "./Client.css";
 import { Button } from 'react-bootstrap';
 import API from "../../utils/API";
 import tileDivider from "../../components/img/tileDivider.png";
-import CarouselInside from "../../components/CarouselInside";
 import Iframe from "react-iframe";
 import { List, ListItem } from "../../components/List";
-import Login from './../../components/login/Login';
 import Footer from "../../components/Footer";
 
 class Client extends Component {
@@ -38,13 +37,19 @@ class Client extends Component {
       .catch(err => console.log(err));
   }
 
+  handleLogout = (event) => {
+    event.preventDefault();
+    API.delete()
+      .catch(err => console.log(err));
+  }
+
 
   render() {
   
     return (
-      <div style={{marginTop: "175px"}}>
-        
-          <Row> 
+      <div style={{marginTop: "110px"}}>
+        <Button bsStyle="warning" style={{marginTop: "20px", float: "right", marginRight:"125px"}} onClick={this.handleLogout}>LOGOUT</Button>
+          <Row style={{marginTop: "30px"}}> 
             <Col size="col-md-10 col-md-offset-1">
               <h1>Your Saved Ideas and Tips</h1>
               <img id="divider" src={tileDivider} alt="img" />

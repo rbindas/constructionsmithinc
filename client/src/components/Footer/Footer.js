@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from 'react-router-dom';
 import { Col, Row, Container } from "../../components/Grid";
 import footerLogo from "../img/footerLogo.png";
 import { Button } from 'react-bootstrap';

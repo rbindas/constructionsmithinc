@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from "../../components/Grid"; 
 import { Input } from "../../components/Form";
 import { Button } from 'react-bootstrap';
-import CarouselInside from "../../components/CarouselInside";
 
 
 class CreateAccount extends Component {

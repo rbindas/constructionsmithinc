@@ -5,7 +5,7 @@ const userRoutes = require("./userRoutes");
 
 
 
-// Article routes
+// routes
 router.use("/comment", commentRoutes);
 router.use("/saved", videoRoutes);
 router.use("/", userRoutes);
