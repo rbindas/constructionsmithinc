@@ -124,8 +124,8 @@ class Comments extends Component {
           {this.state.comments? (this.state.comments.map(comment => {
             return (
               <div id="comment-textarea" key={comment._id}>
-                <p><strong>{comment.name}</strong></p>
                 <p>{comment.text}</p>
+                <p><strong><i>{comment.name}</i></strong></p>
               </div>
               )
           })):null

@@ -24,6 +24,7 @@ button {
 	border-radius: 25px;
 	overflow-y: auto;
 	height: 75px;
+	font-size: 10px;
 }
 
 .btn.btn-lg.btn-success {
