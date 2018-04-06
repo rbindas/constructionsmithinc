@@ -69,6 +69,13 @@ class Comments extends Component {
 
   render(){
     return(
+<<<<<<< HEAD
+     
+
+      <div>
+       
+      <a href="#" id="btn-addcomments" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
+=======
     
     <div>
         <div>
@@ -85,6 +92,7 @@ class Comments extends Component {
         </div>
 
       <a className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
+>>>>>>> bb0f07faaefa4ea3d1cc9a14cc813e1e798e3145
 
       <div className="modal fade" id="commentModal" tabIndex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
         <div className="modal-dialog">
@@ -130,7 +138,19 @@ class Comments extends Component {
           </div>
         </div>
       </div>
-       
+
+        <div>
+          {this.state.comments? (this.state.comments.map(comment => {
+            return (
+              <div id="comment-textarea" key={comment._id}>
+                <p><strong>{comment.name}</strong></p>
+                <p>{comment.text}</p>
+              </div>
+              )
+          })):null
+          } 
+          
+        </div>
     </div>
     
          
