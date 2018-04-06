@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea } from "../../components/Form";
-import { Button } from 'react-bootstrap';
+import { Input } from "../../components/Form";
+import { Button, FormControl } from 'react-bootstrap';
 import API from "../../utils/API";
 import "./Comments.css";
 
@@ -20,39 +20,38 @@ class Comments extends Component {
   loadComments = () => {
     API.getComments()
       .then(res => {
-        console.log(res.data);
+        console.log("load comments results", res.data);
         this.setState({
           comments: res.data
+        }, function(){
+            console.log("state updated", this.state.comments);
         })
       })
       .catch(err => console.log(err));
   }
 
-  handleFormSubmit = event => {
+  handleFormSubmit = async event => {
     event.preventDefault();
     // const {name, text} = event.target;
     if (this.state.name && this.state.text){
 
         console.log(this.state.name);
         console.log(this.state.text);
-        this.saveComment({
+        await this.saveComment({
           name: this.state.name,
           text: this.state.text
-        });
+        })
+            console.log("now running load comments");
+            this.loadComments()    
+
       }
 
-  }
-
-  onChange = event => {
-    this.setState({
-      name:"",
-      text:""
-    })
   }
 
   changeName = event => {
     const name = event.target.value;
     this.setState({name:name});
+
   }
 
   changeText = event => {
@@ -70,10 +69,24 @@ class Comments extends Component {
 
   render(){
     return(
+     
 
-    <div>
+      <div>
+        <div>
+          {this.state.comments? (this.state.comments.map(comment => {
+            return (
+              <div key={comment._id}>
+                <p>{comment.name}</p>
+                <p>{comment.text}</p>
+              </div>
+              )
+          })):null
+          } 
+          
+        </div>
       <a href="#" className="btn btn-lg btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
-      <div className="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
+
+      <div className="modal fade" id="commentModal" tabIndex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -88,20 +101,21 @@ class Comments extends Component {
                   <Col id="name-input">
                     <Input 
                       type="text" 
-                      ref="name" 
+                      name="name" 
                       placeholder="Your Name" 
                       value={this.state.name} 
-                      onChange={this.changeName.bind(this)}
+                      onChange={event => this.changeName(event)}
                       required/>
                   </Col>
                 </Row>
                 <Row>
                   <Col id="comment-textarea">
-                    <TextArea 
-                      ref="text" 
+                    <FormControl 
+                      type="text" 
+                      bsSize="large"
                       placeholder="Add your comment here" 
                       value={this.state.text} 
-                      onChange={this.changeText.bind(this)}
+                      onChange={event => this.changeText(event)}
                       required/>
                   </Col>
                 </Row> 
@@ -117,11 +131,7 @@ class Comments extends Component {
         </div>
       </div>
        
-      
-
-
-
-  </div>
+    </div>
     
          
     );
