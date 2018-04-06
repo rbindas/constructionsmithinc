@@ -94,6 +94,7 @@ class KitchenGallery extends Component {
         original: image11,
         thumbnail: image11thumb
       }
+      
     ]
 
     return (
