@@ -9,7 +9,9 @@ h1 {
 }
 
 #divider {
-  margin-left: 40%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #saved-display{

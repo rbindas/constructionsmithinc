@@ -68,12 +68,10 @@ h6 {
     margin: 15px;
 }
 
-#divider4 {
-    margin-left: 43%;
-}
-
-#divider5 {
-    margin-left: 43%;
+#divider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #message {

@@ -50,7 +50,8 @@ class Login extends Component {
 
       return (
          <div style={{marginTop: "175px"}} >
-            <h1>Welcome Back!</h1>
+            <h1>Welcome To Construction Smith Inc!</h1>
+            <p style={{fontSize: "16px", textAlign: "center"}}>Please Register or Log In To Your Existing Account</p>
             <Container fluid id="login-box">
                <Row>
                   <Col size="col-md-4 col-md-offset-4" id="user-inputs">

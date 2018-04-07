@@ -65,7 +65,7 @@ class Ideas extends Component {
         <Container fluid id="ideas-section">
           <Col size="col-md-8 col-md-offset-2">
             <h1>Ideas and Tips</h1>
-            <img id="divider4" src={tileDivider} alt="img" />
+            <img id="divider" src={tileDivider} alt="img" />
             <p id="headline">Do you want to redesign your kitchen but don't know where to start? Are you planning to remodel your bathroom but have no idea how much to budget? Would you like to know how often to seal your granite counters? Or, maybe you just need to know how to clean grout or care for your woodfloors. Check out our YouTube search engine and get handy tips, or schedule a consultation to discuss!
             </p> 
           </Col>
@@ -168,7 +168,7 @@ class Ideas extends Component {
             <Container fluid id="estimator-section">
               <Col size="col-md-8 col-md-offset-2">
                 <h1>Project Budget Calculator</h1>
-                <img id="divider5" src={tileDivider} alt="img" />
+                <img id="divider" src={tileDivider} alt="img" />
                 <p id="est-summary">The Project Budget Calculator estimates a rough budget for typical projects. It is meant to be a handy planning tool. It is not a contract or guarantee.
                 </p>
               </Col>

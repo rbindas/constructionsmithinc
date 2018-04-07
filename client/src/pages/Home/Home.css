@@ -42,17 +42,12 @@ h3 {
     margin-left: 25%;   
 }
 
-#divider1 {
-	margin-left: 42%;
+#divider {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#divider2 {
-    margin-left: 43%;
-}
-
-#divider3 {
-    margin-left: 45%;
-}
 
 #home-why {
 	float: right;
