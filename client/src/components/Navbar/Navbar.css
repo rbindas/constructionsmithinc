@@ -7,6 +7,8 @@
   }
 }
 
+
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
@@ -22,9 +24,15 @@
   }
 }
 
+.navbar-brand>img {
+    display: block;
+    height: 100%;
+    padding: 0;
+}
 
 
-.navbar {
+/*.navbar {
+  z-index: 100;
   overflow:hidden;
   background-color: white;
   background-image:none;
@@ -36,7 +44,7 @@
   padding: 20px 20px;
   height: 120px;
   color: white;
-}
+}*/
 .phone {
   font-size:20px;
   color:#000000;
@@ -73,8 +81,23 @@
   background-color: #fff;
   #color: #333;
 }
+
 .navbar-default .navbar-nav>li>a {
   color: #000;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+  padding: 15px 10px;
+}
+
+.nav.navbar-nav li {
+  margin: 0;
+}
+
+/* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    float: none;
+    text-align: center;
+    padding: 10px;
+  }
 }
