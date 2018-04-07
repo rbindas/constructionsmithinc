@@ -11,6 +11,7 @@ import KitchenGallery from "../../components/KitchenGallery";
 import OtherGallery from "../../components/OtherGallery";
 import Footer from "../../components/Footer";
 import Comments from "../../components/Comments";
+import ScheduleAppointment from "../../components/ScheduleAppointment";
 
 
 class Home extends Component {
@@ -32,10 +33,10 @@ class Home extends Component {
                   <img id="home-why" src={homeWhyHire} alt="Granite" />
                 </Col>
                 <Col size="col-md-6">
-                  <p id="detail-bio">David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets him apart from all the rest is a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftsman and loves impressing his clients with his beautiful workmanship. Customer Satisfaction is our main goal. It is very important to us that our customers love their completed projects and recommend us to their friends.
+                  <p id="detail-bio" style={{marginLeft:"-1px"}}>David has been designing and building kitchens, bathrooms, finished basements, pool areas and more, for over 30 years. What sets him apart from all the rest is a master's skill level, a designer's eye for detail and most of all, great pride in workmanship. Offering something that is difficult to find in today's world, David is a true craftsman and loves impressing his clients with his beautiful workmanship. Customer Satisfaction is our main goal. It is very important to us that our customers love their completed projects and recommend us to their friends.
                   </p>
                   <br/>
-                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
+                  <ScheduleAppointment />
                 </Col>
               </Row>
           </Col>
@@ -56,19 +57,19 @@ class Home extends Component {
                 </Col>
                 <Col size="col-md-6">
                   <ul>
-                    <li> Kitchen or Bathroom Remodeling </li>
-                    <li> Finished Basements </li>
-                    <li> Fireplaces </li>
-                    <li> Pool decks </li>
-                    <li> Commercial Projects </li>
-                    <li> Residential Projects </li>
-                    <li> Home Renovations or New Construction Projects </li>
-                    <li> Granite Counters </li>
-                    <li> Flooring - Marble, Wood, Ceramic or Porcelain Tile, Luxury Vinyl and Carpet </li>
-                    <li> ...plus so much more! </li>
+                    <li style={{marginLeft:"-20px"}}> Kitchen or Bathroom Remodeling </li>
+                    <li style={{marginLeft:"-20px"}}> Finished Basements </li>
+                    <li style={{marginLeft:"-20px"}}> Fireplaces </li>
+                    <li style={{marginLeft:"-20px"}}> Pool decks </li>
+                    <li style={{marginLeft:"-20px"}}> Commercial Projects </li>
+                    <li style={{marginLeft:"-20px"}}> Residential Projects </li>
+                    <li style={{marginLeft:"-20px"}}> Home Renovations or New Construction Projects </li>
+                    <li style={{marginLeft:"-20px"}}> Granite Counters </li>
+                    <li style={{marginLeft:"-20px"}}> Flooring - Marble, Wood, Ceramic or Porcelain Tile, Luxury Vinyl and Carpet </li>
+                    <li style={{marginLeft:"-20px"}}> ...plus so much more! </li>
                   </ul>
                   <br/>
-                  <Button id="appt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
+                  <ScheduleAppointment />
                 </Col>
               </Row>
           </Col>

@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Col, Row, Container } from "../../components/Grid";
 import footerLogo from "../img/footerLogo.png";
 import { Button } from 'react-bootstrap';
+import ScheduleAppointment from "../../components/ScheduleAppointment";
 
 const Footer = () => (
   <div>
@@ -27,7 +28,8 @@ const Footer = () => (
             </Col>
 
             <Col size="col-md-3" id="thirdCol">
-              <Button id="footerAppt" bsStyle="primary" onClick={()=> window.open("https://calendly.com/tilemandavid", "_blank")}>SCHEDULE AN APPOINTMENT</Button> 
+              <ScheduleAppointment />
+              <br />
               <p><strong>Fully Bonded and Insured</strong></p>
               <Row id="social-icon">
                 <a href="https://www.facebook.com/Construction-Smith-Inc-224425121442895"><i className="fa fa-facebook-square" /></a>

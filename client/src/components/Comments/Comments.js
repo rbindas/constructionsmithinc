@@ -68,11 +68,8 @@ class Comments extends Component {
   render(){
     return(
      
-
       <div>
        
-      
-
       <div className="modal fade" id="commentModal" tabIndex="-1" role="dialog" aria-labelledby="commentModal" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -118,19 +115,26 @@ class Comments extends Component {
         </div>
       </div>
 
-        <span><h3 style={{textAlign: "left"}}>Comments:</h3></span>
+        
         <div id="comment-display">
-          {this.state.comments? (this.state.comments.map(comment => {
-            return (
-              <div key={comment._id}>
-                <p>{comment.text}</p>
-                <p><strong><i>{comment.name}</i></strong></p>
-                <p>-----------------------------------------------------------------------------</p>
-                <br />
-              </div>
-              )
-          })):null
-          }   
+          <div className="panel panel-primary">
+            <div className="panel-heading">
+                <h4 className="panel-title">Comments</h4>
+            </div>
+            <div className="panel-body">
+              {this.state.comments? (this.state.comments.map(comment => {
+              return (
+                <div key={comment._id}>
+                  <p>{comment.text}</p>
+                  <p><strong><i>{comment.name}</i></strong></p>
+                  <p style={{textAlign:"center"}}>-------------------------------------------</p>
+                 <br />
+                </div>
+                )
+            })):null
+            } 
+            </div>  
+          </div>
         </div>
         <a href="#" id="btn-addcomments" className="btn btn-md btn-success" data-toggle="modal" data-target="#commentModal">Add Comments</a>
     </div>

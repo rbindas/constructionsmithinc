@@ -21,13 +21,7 @@ button {
 }
 
 #comment-display {
-	width: 90%;
-	padding-left: 15px;
-	padding-right: 10px;
-	margin-top: 10px;
 	font-family: 'Montserrat', sans-serif;
-	border: solid thin #cccccc;
-	border-radius: 25px;
 	overflow-y: auto;
 	height: 400px;
 	font-size: 12px;
