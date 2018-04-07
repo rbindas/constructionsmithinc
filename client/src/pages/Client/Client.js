@@ -8,6 +8,8 @@ import tileDivider from "../../components/img/tileDivider.png";
 import Iframe from "react-iframe";
 import { List, ListItem } from "../../components/List";
 import Footer from "../../components/Footer";
+import axios from 'axios';
+import { update } from '../../components/login/withUser';
 
 class Client extends Component {
   state = {
@@ -39,9 +41,12 @@ class Client extends Component {
 
   handleLogout = (event) => {
     event.preventDefault();
-    API.delete()
-      .catch(err => console.log(err));
-  }
+    axios.delete('/api/auth').then(user => {
+      update(null);
+      }).catch(err => {  
+        console.log(err);
+      });
+      }
 
 
   render() {

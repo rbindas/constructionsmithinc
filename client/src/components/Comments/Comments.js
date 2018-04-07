@@ -43,9 +43,7 @@ class Comments extends Component {
         })
             console.log("now running load comments");
             this.loadComments()    
-
       }
-
   }
 
   changeName = event => {

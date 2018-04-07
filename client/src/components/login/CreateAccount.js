@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from "../../components/Grid"; 
 import { Input } from "../../components/Form";
 import { Button } from 'react-bootstrap';
-
+import { update } from './withUser';
 
 class CreateAccount extends Component {
     state = {
@@ -38,6 +38,7 @@ class CreateAccount extends Component {
             password
         })
             .then(user => {
+                update(user.data);
                 history.push('/client');
             })
             .catch(err => {

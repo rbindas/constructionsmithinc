@@ -24,11 +24,11 @@ class LogIn extends Component {
     return (
       <div>
         
-              { this.state.currentUser
-                ? ""
-                : <Login callParent={() => this.userLoggedIn()} history={this.props.history}/>
+          { this.state.currentUser
+            ? ""
+            : <Login callParent={() => this.userLoggedIn()} history={this.props.history}/>
         
-              }
+          }
     
 
       </div>
