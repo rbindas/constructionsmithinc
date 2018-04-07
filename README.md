@@ -1,6 +1,6 @@
 # constructionsmithinc
 
-Our application is a commercial website for a construction company (http://www.constructionsmithinc). The goal was to create a marketing tool for the small business and offer added value for customers in order to achieve better rankings and keep people on the site longer.
+Our application is a commercial website for a construction company (http://www.constructionsmithinc.com). The goal was to create a marketing tool for the small business and offer added value for customers in order to achieve better rankings and keep people on the site longer.
 
 ## Getting Started
 
