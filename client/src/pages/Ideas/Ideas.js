@@ -108,7 +108,7 @@ class Ideas extends Component {
                       {this.state.videos.slice(0,4).map(video => (
                         <ListItem key={video.id.videoId}>   
                             <Iframe 
-                                url={`http://www.youtube.com/embed/${video.id.videoId}`}
+                                url={`https://www.youtube.com/embed/${video.id.videoId}`}
                                 width="250px"
                                 height="175px" 
                                 position="relative"
@@ -132,7 +132,7 @@ class Ideas extends Component {
                         <Row>
                           <Col size="col-md-3 col-md-offset-2">
                           <Iframe 
-                            url="http://www.youtube.com/embed/-FX6tLTflAs"
+                            url="https://www.youtube.com/embed/-FX6tLTflAs"
                             width="250px"
                             height="175px" 
                             position="relative"
@@ -140,7 +140,7 @@ class Ideas extends Component {
                           </Col>
                           <Col size="col-md-3">
                           <Iframe 
-                            url="http://www.youtube.com/embed/bsLWNUAZ-RU"
+                            url="https://www.youtube.com/embed/bsLWNUAZ-RU"
                             width="250px"
                             height="175px" 
                             position="relative"
@@ -148,7 +148,7 @@ class Ideas extends Component {
                           </Col>
                           <Col size="col-md-3">
                           <Iframe 
-                            url="http://www.youtube.com/embed/haQwAu7YUW8"
+                            url="https://www.youtube.com/embed/haQwAu7YUW8"
                             width="250px"
                             height="175px" 
                             position="relative"
