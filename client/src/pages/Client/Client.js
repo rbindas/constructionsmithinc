@@ -69,7 +69,7 @@ class Client extends Component {
                     {this.state.videos.map(video => (
                       <ListItem key={video.videoId}>
                           <Iframe 
-                                url={`http://www.youtube.com/embed/${video.videoId}`}
+                                url={`https://www.youtube.com/embed/${video.videoId}`}
                                 width="250px"
                                 height="175px" 
                                 position="relative"
